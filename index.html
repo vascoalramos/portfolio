@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>Portfolio - Coming Soon</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main-blue.css" id="color-switcher">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway|Righteous" rel="stylesheet">
+    <script data-dapp-detection="">
+        (function () {
+            let alreadyInsertedMetaTag = false
+
+            function __insertDappDetected() {
+                if (!alreadyInsertedMetaTag) {
+                    const meta = document.createElement('meta')
+                    meta.name = 'dapp-detected'
+                    document.head.appendChild(meta)
+                    alreadyInsertedMetaTag = true
+                }
+            }
+
+            if (window.hasOwnProperty('web3')) {
+                // Note a closure can't be used for this var because some sites like
+                // www.wnyc.org do a second script execution via eval for some reason.
+                window.__disableDappDetectionInsertion = true
+                // Likely oldWeb3 is undefined and it has a property only because
+                // we defined it. Some sites like wnyc.org are evaling all scripts
+                // that exist again, so this is protection against multiple calls.
+                if (window.web3 === undefined) {
+                    return
+                }
+                __insertDappDetected()
+            } else {
+                var oldWeb3 = window.web3
+                Object.defineProperty(window, 'web3', {
+                    configurable: true,
+                    set: function (val) {
+                        if (!window.__disableDappDetectionInsertion)
+                            __insertDappDetected()
+                        oldWeb3 = val
+                    },
+                    get: function () {
+                        if (!window.__disableDappDetectionInsertion)
+                            __insertDappDetected()
+                        return oldWeb3
+                    }
+                })
+            }
+        })()
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <!--Hero-->
+    <div class="hero" id="particles-js">
+        <div class="centered">
+            <h1 class="title">Portfolio</h1>
+            <h2 class="heading">Coming Soon</h2>
+            <div class="countdown" id="countdown">
+                <div class="count-box">
+                    <h2 class="countdown-num">0</h2>
+                    <h4 class="countdown-word">days</h4>
+                </div>
+                <div class="count-box">
+                    <h2 class="countdown-num">0</h2>
+                    <h4 class="countdown-word">hours</h4>
+                </div>
+                <div class="count-box">
+                    <h2 class="countdown-num">00</h2>
+                    <h4 class="countdown-word">minutes</h4>
+                </div>
+                <div class="count-box">
+                    <h2 class="countdown-num">00</h2>
+                    <h4 class="countdown-word">seconds</h4>
+                </div>
+            </div>
+            <p class="description">I'm currently developing this website to present my online portfolio.</p>
+        </div>
+        <div class="social-text">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Behance</a>
+        </div>
+    </div>
+    <!--Scripts-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
