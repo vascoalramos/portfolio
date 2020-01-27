@@ -1,5 +1,13 @@
 import uuidv1 from 'uuid/v1';
 
+// HERO DATA
+export const heroData = {
+  title: '',
+  name: '',
+  subtitle: '',
+  cta: '',
+};
+
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.png',
