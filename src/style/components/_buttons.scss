@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem $default-font-size;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+  color: $secondary-color;
+  font-family: "Space Mono", "sans serif";
+  font-size: 1rem;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+/* Hero Style */
+.cta-btn--hero {
+  font-size: 1.5rem !important;
+  border: 2px solid transparent;
+  border-color: $secondary-color;
+  padding: 1.25em 1.75em !important;
+  border-radius: 3px;
+  color: $secondary-color !important;
+
+  // Responsive Button hero style
+  @include respond(phone) {
+    background-image: none;
+    border: 2px solid $secondary-color;
+
+  } 
+
+  &:hover {
+    background-color: #48bbf118;
+    color: $secondary-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Resume Style */
+.cta-btn--resume {
+  font-size: 1.3rem !important;
+  color: $secondary-color !important;
+  border: 1px solid $secondary-color;
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+
+
+  &::after {
+    color: $secondary-color !important;
+  }
+
+  &:hover {
+    color: $secondary-color !important;
+    background-color: #48bbf118;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Arrow Button */
+.up i {
+  color: #272727;
+}
