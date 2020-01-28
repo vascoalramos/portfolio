@@ -5,6 +5,7 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Navbar from './Navigation/Navbar';
+import SEO from './SEO';
 
 import { PortfolioProvider } from '../context/context';
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects }}>
+      <SEO />
       <Navbar />
       <Hero />
       <About />

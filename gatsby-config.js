@@ -4,6 +4,7 @@ module.exports = {
     description: "I'm Vasco, a 20 years old Computer Science Student at UA, from Portugal.",
     author: 'Vasco Ramos',
     siteUrl: 'https://vascoalramos.me',
+    imageShare: 'share.png',
     email: 'hello@vascoalramos.me',
     social: [
       {name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos'},
