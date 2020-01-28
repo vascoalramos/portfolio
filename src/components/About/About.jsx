@@ -51,7 +51,7 @@ const About = () => {
                   dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
                 />
                 {
-                  <span className="d-flex mt-3">
+                  <span className={isMobile ? "": "d-flex mt-3"}>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
