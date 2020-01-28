@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://vascoalramos.me',
     email: 'hello@vascoalramos.me',
     social: [
-      {name: 'linkedin', url: 'https://linkedin.com/vascoalramos'},
+      {name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos'},
       {name: 'github', url: 'https://github.com/vascoalramos'}]
   },
   plugins: [
