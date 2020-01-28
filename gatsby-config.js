@@ -15,6 +15,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -36,7 +37,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       }
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156556339-1",
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
