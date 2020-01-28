@@ -5,7 +5,7 @@ import { animated, useSpring, config } from 'react-spring';
 
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './Mobile/MobileMenu';
-// import LogoNavbar from '../../components/UI/logoNavbar';
+import LogoNavbar from './NavItems/LogoNavbar';
 
 const StyledHeader = styled(animated.header)`
   position: fixed;
@@ -45,15 +45,13 @@ const Navbar = React.memo(() => {
     height: isMobile ? '6rem' : '7rem',
     from: {
       opacity: 0,
-      height: '0rem'
-    }
+      height: '0rem',
+    },
   });
 
   // Change navbar content accordingly
   const changeMobile = () => {
-    window.matchMedia('(max-width: 37.5em)').matches
-      ? setisMobile(true)
-      : setisMobile(false);
+    window.matchMedia('(max-width: 37.5em)').matches ? setisMobile(true) : setisMobile(false);
   };
 
   // Event listener on resize, so when it change we check o remove desktop menu/mobile menu
@@ -68,6 +66,7 @@ const Navbar = React.memo(() => {
     <StyledHeader style={NavBarSpring}>
       <Contained>
         <Wrapper isMobile={isMobile}>
+          <LogoNavbar />
           {isMobile ? (
             <MobileMenu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
           ) : (
@@ -80,11 +79,11 @@ const Navbar = React.memo(() => {
 });
 
 Navbar.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 };
 
 export default Navbar;
