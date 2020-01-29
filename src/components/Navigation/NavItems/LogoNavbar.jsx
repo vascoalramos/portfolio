@@ -37,12 +37,10 @@ const LogoNavBar = () => {
   return (
     <StyledLink
       to=""
-      smooth={true}
-      spy={true}
+      smooth="true"
+      spy="true"
       title="Home"
       // When header section is active, hide scroll to top When inactive, show scroll to top
-      onSetActive={() => setShowScrollTop(false)}
-      onSetInactive={() => setShowScrollTop(true)}
       onClick={() => setMenuOpened(false)}
     >
       {renderLogo()}

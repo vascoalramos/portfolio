@@ -9,21 +9,17 @@ import SEO from './SEO';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData } from '../mock/data';
+import { projectsData } from '../mock/data';
 
 function App() {
-  const [hero, setHero] = useState({});
-  const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setHero({ ...heroData });
-    setAbout({ ...aboutData });
     setProjects([...projectsData]);
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects }}>
+    <PortfolioProvider value={{ projects }}>
       <SEO />
       <Navbar />
       <Hero />
