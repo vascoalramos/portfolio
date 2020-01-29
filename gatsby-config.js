@@ -49,8 +49,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Simplefolio',
-        short_name: 'Simplefolio',
+        name: 'Vasco Ramos | Computer Science Student',
+        short_name: 'Vasco Ramos',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#02aab0',

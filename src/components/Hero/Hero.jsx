@@ -21,17 +21,17 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron" style={{borderRadius: 0}}>
+    <section id="hero" className="jumbotron" style={{ borderRadius: 0 }}>
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <p className="hero-salute">{title || 'Hi, my name is'}</p>
-          <h1 className="hero-title text-color-main">{name || 'Your Name'}</h1>
-          <h1 className="hero-title">{subtitle || "I'm the Unknown Developer."}</h1>
+          <p className="hero-salute">{title}</p>
+          <h1 className="hero-title text-color-main">{name}</h1>
+          <h1 className="hero-title">{subtitle}</h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <a className="cta-btn cta-btn--hero" href="#about">
-              {cta || 'Know more'}
+              {cta}
             </a>
           </p>
         </Fade>
