@@ -8,7 +8,7 @@ module.exports = {
     email: 'hello@vascoalramos.me',
     social: [
       { name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos' },
-      { name: 'github', url: 'https://github.com/vascoalramos' }
+      { name: 'github', url: 'https://github.com/vascoalramos' },
     ],
   },
   plugins: [
@@ -23,21 +23,21 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images/`,
-      }
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages/`,
-      }
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-gtag`,
@@ -45,7 +45,7 @@ module.exports = {
         trackingId: `UA-156556339-1`,
         head: true,
         anonymize: true,
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -57,7 +57,9 @@ module.exports = {
         theme_color: '#02aab0',
         display: 'standalone',
         icon: 'src/images/favicon.png',
-      }
-    }
+      },
+    },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
   ],
 };

@@ -56,6 +56,7 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
+                      title="Download my resume"
                       href={data.markdownRemark.frontmatter.resume}
                     >
                       Resume

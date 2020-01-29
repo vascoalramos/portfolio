@@ -25,14 +25,14 @@ const Footer = () => {
   return (
     <footer className="footer navbar-static-bottom">
       <Container>
-        <a href="#top" aria-label="Back To Top" className="back-to-top">
+        <a href="#top" title="Go Back To Top" aria-label="Back To Top" className="back-to-top">
           <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
         </a>
         <div className="social-links">
           {data.site.siteMetadata.social.map(entry => {
             const {name, url} = entry;
             return (
-              <a key={uuidv1()} href={url} rel="noopener noreferrer" target="_blank" aria-label={name}>
+              <a key={uuidv1()} href={url} title={name} rel="noopener noreferrer" target="_blank" aria-label={name}>
                 <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
               </a>
             );
@@ -50,7 +50,7 @@ const Footer = () => {
             const {name, url} = entry;
             if (name === "github") {
               return (
-                <a key={uuidv1()} href={url} target="_blank" rel="noopener noreferrer">
+                <a key={uuidv1()} href={url} title="My Github Profile" target="_blank" rel="noopener noreferrer">
                 Vasco Ramos
                  </a>);
             }

@@ -61,6 +61,7 @@ const NavItems = ({ mobile, clicked }) => {
         style={{ marginLeft: mobile ? '0' : '3.5em', marginTop: mobile ? '1em' : 0 }}
         href="/resume.pdf"
         target="_blank"
+        title="Download my resume"
         rel="nofollow noopener noreferrer"
       >
         Resume

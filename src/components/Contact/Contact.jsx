@@ -26,6 +26,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
+              title="Send me an Email!"
               href={`mailto:${data.site.siteMetadata.email}`}
             >
               Get In Touch

@@ -26,15 +26,20 @@ const LogoNavBar = () => {
 
   // Render dark or light logo
   const renderLogo = () => {
-    return <Img alt="Logo Dark" title="Logo Dark" fixed={darkLogo.childImageSharp.fixed} />;
+    return (
+      <animated.div>
+        <Img alt="logo" title="Home" fixed={darkLogo.childImageSharp.fixed} />
+      </animated.div>
+    );
   };
 
   // If is not a section from the index(no one page scroll link), render the gatsby link instead
   return (
     <StyledLink
-      to="header"
+      to=""
       smooth={true}
       spy={true}
+      title="Home"
       // When header section is active, hide scroll to top When inactive, show scroll to top
       onSetActive={() => setShowScrollTop(false)}
       onSetInactive={() => setShowScrollTop(true)}
