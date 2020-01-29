@@ -7,8 +7,9 @@ module.exports = {
     imageShare: 'share.png',
     email: 'hello@vascoalramos.me',
     social: [
-      {name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos'},
-      {name: 'github', url: 'https://github.com/vascoalramos'}]
+      { name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos' },
+      { name: 'github', url: 'https://github.com/vascoalramos' }
+    ],
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -44,7 +45,7 @@ module.exports = {
         trackingId: `UA-156556339-1`,
         head: true,
         anonymize: true,
-      },
+      }
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -56,7 +57,7 @@ module.exports = {
         theme_color: '#02aab0',
         display: 'standalone',
         icon: 'src/images/favicon.png',
-      },
-    },
+      }
+    }
   ],
 };
