@@ -9,7 +9,7 @@ var LINKS = [
   { name: 'Experience', to: '#experience' },
   { name: 'Projects', to: '#projects' },
   { name: 'Education', to: '#education' },
-  { name: 'Skills', to: '#skills'},
+  { name: 'Skills', to: '#skills' },
   { name: 'Contacts', to: '#contact' },
 ];
 

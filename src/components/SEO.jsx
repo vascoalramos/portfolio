@@ -21,9 +21,7 @@ const SEO = ({ meta, lang, title }) => {
   );
 
   const metaDescription = site.siteMetadata.description;
-  const metaImage = `${site.siteMetadata.siteUrl}/${
-    site.siteMetadata.imageShare
-  }`;
+  const metaImage = `${site.siteMetadata.siteUrl}/${site.siteMetadata.imageShare}`;
 
   return (
     <Helmet
@@ -75,7 +73,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
 };
 
 export default SEO;

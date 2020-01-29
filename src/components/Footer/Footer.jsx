@@ -30,9 +30,16 @@ const Footer = () => {
         </a>
         <div className="social-links">
           {data.site.siteMetadata.social.map(entry => {
-            const {name, url} = entry;
+            const { name, url } = entry;
             return (
-              <a key={uuidv1()} href={url} title={name} rel="noopener noreferrer" target="_blank" aria-label={name}>
+              <a
+                key={uuidv1()}
+                href={url}
+                title={name}
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label={name}
+              >
                 <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
               </a>
             );
@@ -47,15 +54,21 @@ const Footer = () => {
           ></i>{' '}
           by{' '}
           {data.site.siteMetadata.social.map(entry => {
-            const {name, url} = entry;
-            if (name === "github") {
+            const { name, url } = entry;
+            if (name === 'github') {
               return (
-                <a key={uuidv1()} href={url} title="My Github Profile" target="_blank" rel="noopener noreferrer">
-                Vasco Ramos
-                 </a>);
+                <a
+                  key={uuidv1()}
+                  href={url}
+                  title="My Github Profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vasco Ramos
+                </a>
+              );
             }
           })}
-          
         </p>
       </Container>
     </footer>

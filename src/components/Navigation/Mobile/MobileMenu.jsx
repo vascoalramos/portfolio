@@ -15,19 +15,10 @@ const MobileMenu = ({ menuOpened, setMenuOpened }) => {
   // If on 404 page, dont render menu, because menu links are from react-scroll, won't work there. Logo is prepared to be clicked and will work
   return (
     <>
-      <HamburgerToggler
-        menuOpened={menuOpened}
-        toggleChange={() => setMenuOpened(!menuOpened)}
-      />
+      <HamburgerToggler menuOpened={menuOpened} toggleChange={() => setMenuOpened(!menuOpened)} />
       {SideDrawerTransition.map(
         ({ item, key, props }) =>
-          item && (
-            <SideDrawer
-              key={key}
-              style={props}
-              setMenuOpened={() => setMenuOpened(false)}
-            />
-          )
+          item && <SideDrawer key={key} style={props} setMenuOpened={() => setMenuOpened(false)} />
       )}
     </>
   );

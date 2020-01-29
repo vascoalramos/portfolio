@@ -10,7 +10,7 @@ const Header = () => {
         frontmatter {
           salute
           name
-          subtitle
+          micro_bio
           cta
         }
       }
@@ -36,7 +36,7 @@ const Header = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <p className="hero-salute">{data.markdownRemark.frontmatter.salute}</p>
           <h1 className="hero-title text-color-main">{data.markdownRemark.frontmatter.name}</h1>
-          <h1 className="hero-title">{data.markdownRemark.frontmatter.subtitle}</h1>
+          <h1 className="hero-title">{data.markdownRemark.frontmatter.micro_bio}</h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
