@@ -6,6 +6,12 @@ You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.m
 
 ![Portfolio Thumbnail](thumbnail.png)
 
+## Built With
+
+* [Gatsby](https://www.gatsbyjs.org/) - The web framework used
+* [GraphQL](https://graphql.org/) - Query Language API
+* [Markdown](https://www.markdownguide.org/) - Data Source
+
 
 ## License
 
