@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites 📋
 
 * [Git](https://git-scm.com)
-* [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+* [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer
 * [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start/)
 
 The version of each prerequisite should be the following:
@@ -51,9 +51,9 @@ $ npm run develop
 
 ## Deployment 📦
 
-Once you have done your setup. You need to put your website online!
+Once you have done your setup, you need to put your website online!
 
-What I chose was [Namecheap](https://namecheap.com) to domain and dns and github pages to run my website!
+What I chose was [Namecheap](https://namecheap.com) to domain and dns and [GitHub Pages](https://pages.github.com/) to run my website!
 
 Using the script I provide in [package.json](package.json) (I'm assuming your repo is already linked to your local folder and you have a gh-pages branch created), the only thing you have to do is to run the following command:
 
