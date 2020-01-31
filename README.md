@@ -60,7 +60,7 @@ Using the script I provide in [package.json](package.json) (I'm assuming your re
 ```bash
 # Generate a full static production build 
 # and commit this build to your gh-pages branch
-npm run deploy
+$ npm run deploy
 ```
 
 You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.me)
