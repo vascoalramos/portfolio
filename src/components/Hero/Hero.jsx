@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 
-
 const Header = ({ data }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg'
+import ProjectImg from '../Image/ProjectImg';
 
 const StyledContainer = styled.div`
   flex-direction: column;
@@ -113,7 +113,7 @@ const Featured = ({ data }) => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
 
-  console.log(data);    
+  console.log(data);
 
   return (
     <StyledContainer id="projects">

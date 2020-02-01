@@ -9,7 +9,7 @@ const SEO = ({ data }) => {
 
   return (
     <Helmet
-      htmlAttributes={{lang}}
+      htmlAttributes={{ lang }}
       title={data.title}
       meta={[
         {
