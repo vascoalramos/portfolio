@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    lang: 'en',
     title: 'Vasco Ramos | Computer Science Student',
     description: "I'm Vasco, a 20 years old Computer Science Student at UA, from Portugal.",
     author: 'Vasco Ramos',
