@@ -1,27 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import { graphql, useStaticQuery } from 'gatsby';
 import uuidv1 from 'uuid/v1';
+import PropTypes from 'prop-types';
 
-const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          social {
-            name
-            url
-          }
-        }
-      }
-    }
-  `);
-
-  const { loveStyle } = {
-    color: 'rgb(220, 53, 69)',
-    fontSize: '1.8rem',
-  };
-
+const Footer = ({ data }) => {
   return (
     <footer className="footer navbar-static-bottom">
       <Container>
@@ -29,7 +11,7 @@ const Footer = () => {
           <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
         </a>
         <div className="social-links">
-          {data.site.siteMetadata.social.map(entry => {
+          {data.social.map(entry => {
             const { name, url } = entry;
             return (
               <a
@@ -53,7 +35,7 @@ const Footer = () => {
             style={{ color: 'rgb(220, 53, 69)', fontSize: '1.8rem' }}
           ></i>{' '}
           by{' '}
-          {data.site.siteMetadata.social.map(entry => {
+          {data.social.map(entry => {
             const { name, url } = entry;
             if (name === 'github') {
               return (
@@ -73,6 +55,10 @@ const Footer = () => {
       </Container>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default Footer;

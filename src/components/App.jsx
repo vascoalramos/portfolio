@@ -1,34 +1,79 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Navbar from './Navigation/Navbar';
+import Feature from './featured/feature';
 import SEO from './SEO';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { PortfolioProvider } from '../context/context';
-
-import { projectsData } from '../mock/data';
-
-function App() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    setProjects([...projectsData]);
-  }, []);
+const App = () => {
+  const data = useStaticQuery(graphql`
+    {
+      featured: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/featured/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              image
+              tech
+              github
+              external
+            }
+            html
+          }
+        }
+      }
+      hero: markdownRemark(fileAbsolutePath: { regex: "/hero.md/" }) {
+        frontmatter {
+          salute
+          name
+          micro_bio
+          cta
+        }
+      }
+      about: markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
+        html
+        frontmatter {
+          image
+          resume
+        }
+      }
+      site: site {
+        siteMetadata {
+          social {
+            name
+            url
+          }
+          email
+          lang
+          title
+          description
+          author
+          siteUrl
+          imageShare
+        }
+      }
+    }
+  `);
 
   return (
-    <PortfolioProvider value={{ projects }}>
-      <SEO />
+    <>
+      <SEO data={data.site.siteMetadata} />
       <Navbar />
-      <Hero />
-      <About />
+      <Hero data={data.hero.frontmatter} />
+      <About data={data.about} />
+      {/* <Feature data={data.featured.edges} /> */}
       {/* <Projects /> */}
-      <Contact />
-      <Footer />
-    </PortfolioProvider>
+      <Contact data={data.site.siteMetadata.email} />
+      <Footer data={data.site.siteMetadata} />
+    </>
   );
-}
+};
 
 export default App;

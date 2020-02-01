@@ -1,23 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
-import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 
-const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
-        html
-        frontmatter {
-          image
-          resume
-        }
-      }
-    }
-  `);
-
+const About = ({ data }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -39,7 +27,7 @@ const About = () => {
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={data.markdownRemark.frontmatter.image} />
+                <AboutImg alt="profile picture" filename={data.frontmatter.image} />
               </div>
             </Fade>
           </Col>
@@ -48,7 +36,7 @@ const About = () => {
               <div>
                 <div
                   className="about-wrapper__info-text"
-                  dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+                  dangerouslySetInnerHTML={{ __html: data.html }}
                 />
                 {
                   <span className={isMobile ? '' : 'd-flex mt-3'}>
@@ -57,7 +45,7 @@ const About = () => {
                       rel="noopener noreferrer"
                       className="cta-btn cta-btn--resume"
                       title="Download my resume"
-                      href={data.markdownRemark.frontmatter.resume}
+                      href={data.frontmatter.resume}
                     >
                       Resume
                     </a>
@@ -70,6 +58,10 @@ const About = () => {
       </Container>
     </section>
   );
+};
+
+About.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default About;

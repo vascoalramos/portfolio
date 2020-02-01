@@ -1,34 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({ meta, lang, title }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-            imageShare
-          }
-        }
-      }
-    `
-  );
-
-  const metaDescription = site.siteMetadata.description;
-  const metaImage = `${site.siteMetadata.siteUrl}/${site.siteMetadata.imageShare}`;
+const SEO = ({ data }) => {
+  const metaDescription = data.description;
+  const metaImage = `${data.siteUrl}/${data.imageShare}`;
+  const lang = data.lang;
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title || site.siteMetadata.title}
+      htmlAttributes={{lang}}
+      title={data.title}
       meta={[
         {
           name: `description`,
@@ -36,11 +18,11 @@ const SEO = ({ meta, lang, title }) => {
         },
         {
           property: 'og:url',
-          content: site.siteMetadata.siteUrl,
+          content: data.siteUrl,
         },
         {
           property: `og:title`,
-          content: title,
+          content: data.title,
         },
         {
           property: `og:description`,
@@ -50,30 +32,18 @@ const SEO = ({ meta, lang, title }) => {
           property: `og:type`,
           content: `website`,
         },
-      ]
-        .concat([
-          {
-            property: 'og:image',
-            content: metaImage,
-          },
-        ])
-        .concat(meta)}
+
+        {
+          property: 'og:image',
+          content: metaImage,
+        },
+      ]}
     />
   );
 };
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-
 SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
-  image: PropTypes.string,
+  data: PropTypes.object.isRequired,
 };
 
 export default SEO;

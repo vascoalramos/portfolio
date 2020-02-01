@@ -1,20 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import Title from '../Title/Title';
-import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 
-const Contact = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          email
-        }
-      }
-    }
-  `);
-
+const Contact = ({ data }) => {
   return (
     <section id="contact">
       <Container>
@@ -27,7 +17,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="cta-btn cta-btn--resume"
               title="Send me an Email!"
-              href={`mailto:${data.site.siteMetadata.email}`}
+              href={`mailto:${data}`}
             >
               Get In Touch
             </a>
@@ -36,6 +26,10 @@ const Contact = () => {
       </Container>
     </section>
   );
+};
+
+Contact.propTypes = {
+  data: PropTypes.string.isRequired,
 };
 
 export default Contact;
