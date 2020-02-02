@@ -9,7 +9,7 @@ I'm passionate about Databases, Software Engineering (mostly Backend and DevOps)
 
 During these years at the University of Aveiro, I always tried to enrich my academic path with other activities such as volunteer work and associativism within the university. With that in mind, I am a mentor to first-year students.
 
-Furthermore, since my second year, I am part of an organization called <a href="http://aettua.pt" target="_blank" rel="noopener noreferrer">AETTUA</a>, a non-profit youth association that aims to promote the most diverse activities for all students, teachers and employees of our department (<a href="https://www.ua.pt/deti" target="_blank" rel="noopener noreferrer">DETI</a>).
+Furthermore, since my second year, I am part of an organization called <a href="http://aettua.pt" target="_blank" rel="noopener noreferrer" title="AETTUA">AETTUA</a>, a non-profit youth association that aims to promote the most diverse activities for all students, teachers and employees of our department (<a href="https://www.ua.pt/deti" target="_blank" rel="noopener noreferrer" title="DETI">DETI</a>).
 
 With this experience, I had the chance to organise workshops, trips to a bunch of company's headquarters and job fairs. I consider this work, one of the most important things I did during college because it allowed me to improve my social skills, such as teamwork and people management.
 
