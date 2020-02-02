@@ -24,14 +24,14 @@ const About = ({ data }) => {
       <Container>
         <Title title="About Me" />
         <Row className="about-wrapper">
-          <Col md={6} sm={12}>
+          <Col md={4} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
                 <AboutImg alt="profile picture" filename={data.frontmatter.image} />
               </div>
             </Fade>
           </Col>
-          <Col md={6} sm={12}>
+          <Col md={8} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div>
                 <div
@@ -39,7 +39,7 @@ const About = ({ data }) => {
                   dangerouslySetInnerHTML={{ __html: data.html }}
                 />
                 {
-                  <span className={isMobile ? '' : 'd-flex mt-3'}>
+                  <span className={isMobile ? '' : 'd-flex mt-5'}>
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
