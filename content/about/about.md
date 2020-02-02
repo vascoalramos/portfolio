@@ -1,5 +1,5 @@
 ---
-image: profile.png
+image: './profile.jpg'
 resume: resume.pdf
 ---
 

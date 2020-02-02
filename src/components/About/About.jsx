@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
 const About = ({ data }) => {
@@ -27,7 +27,11 @@ const About = ({ data }) => {
           <Col md={4} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={data.frontmatter.image} />
+                <Img
+                  className="rounded shadow-lg"
+                  alt="profile picture"
+                  fixed={data.frontmatter.image.childImageSharp.fixed}
+                />
               </div>
             </Fade>
           </Col>

@@ -20,7 +20,13 @@ const App = () => {
           node {
             frontmatter {
               title
-              image
+              image {
+                childImageSharp {
+                  fixed(width: 300) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
               tech
               github
               external
@@ -40,7 +46,13 @@ const App = () => {
       about: markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
         html
         frontmatter {
-          image
+          image {
+            childImageSharp {
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
           resume
         }
       }
