@@ -85,7 +85,7 @@ You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.m
 
 ## Authors
 
-- **Vasco Ramos -** [vascoalramos](https://github.com/vascoalramos)
+- **Vasco Ramos:** [vascoalramos](https://github.com/vascoalramos)
 
 ## License 📄
 
