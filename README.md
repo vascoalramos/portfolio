@@ -13,9 +13,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites 📋
 
-- [Git](https://git-scm.com)
-- [Node.js](https://nodejs.org/en/download) (which comes with [npm](http://npmjs.com)) installed on your computer
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start)
+* [Git](https://git-scm.com)
+* [Node.js](https://nodejs.org/en/download) (which comes with [npm](http://npmjs.com)) installed on your computer
+* [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start)
 
 The version of each prerequisite should be the following:
 
@@ -77,15 +77,15 @@ You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.m
 
 ## Technologies Used 🛠️
 
-- [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
-- [GraphQL](https://graphql.org/) - Query language for APIs
-- [Markdown](https://www.markdownguide.org/) - Data Source
-- [React](https://es.reactjs.org/) - Front-End JavaScript library
-- [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction) - Front-End UI library
+* [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
+* [GraphQL](https://graphql.org/) - Query language for APIs
+* [Markdown](https://www.markdownguide.org/) - Data Source
+* [React](https://es.reactjs.org/) - Front-End JavaScript library
+* [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction) - Front-End UI library
 
 ## Authors
 
-- **Vasco Ramos:** [vascoalramos](https://github.com/vascoalramos)
+* **Vasco Ramos:** [vascoalramos](https://github.com/vascoalramos)
 
 ## License 📄
 
@@ -93,8 +93,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments 🎁
 
-- I built my portfolio based on a customised gatsby starter from [cobidev](https://github.com/cobidev) named [gatsby-simplefolio](https://github.com/cobidev/gatsby-simplefolio)
-- I draw a lot of design inspiration from [Brittany Chiang](https://github.com/bchiang7) 4th version of her own portfolio which can be found [here](https://brittanychiang.com)
+* I built my portfolio based on a customised gatsby starter from [cobidev](https://github.com/cobidev) named [gatsby-simplefolio](https://github.com/cobidev/gatsby-simplefolio)
+* I draw a lot of design inspiration from [Brittany Chiang](https://github.com/bchiang7) 4th version of her own portfolio which can be found [here](https://brittanychiang.com)
 
 ## Forking This Repo 🚨
 
