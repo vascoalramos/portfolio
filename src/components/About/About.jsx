@@ -41,7 +41,7 @@ const About = ({ data }) => {
                 <div
                   className="about-wrapper__info-text"
                   dangerouslySetInnerHTML={{ __html: data.html }}
-                  style={{textAlign: "justify"}}
+                  style={{ textAlign: 'justify' }}
                 />
                 {
                   <span className={isMobile ? '' : 'd-flex mt-5'}>
