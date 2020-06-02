@@ -5,7 +5,7 @@ resume: resume.pdf
 
 Hello! I'm Vasco Ramos, a 20-year-old student at the University of Aveiro, from the district of Viseu. I'm currently in the last year of my 3-year Bachelor Degree in the fields of Computer Science and Software Engineering.
 
-I'm passionate about Databases, Software Engineering (mostly Backend and DevOps), Machine Learning, Data Science and Data Engineering.
+I'm passionate about Databases, Software Engineering, Web and Micro Services, DevOps and Data Engineering.
 
 During these years at the University of Aveiro, I always tried to enrich my academic path with other activities such as volunteer work and associativism within the university. With that in mind, I am a mentor to first-year students.
 
