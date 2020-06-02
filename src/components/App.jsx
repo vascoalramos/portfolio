@@ -9,7 +9,7 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Navbar from './Navigation/Navbar';
-// import Feature from './featured/feature';
+import Feature from './featured/feature';
 import SEO from './SEO';
 
 library.add(fab, fas);
@@ -85,7 +85,7 @@ const App = () => {
       <Navbar />
       <Hero data={data.hero.frontmatter} />
       <About data={data.about} />
-      {/* <Feature data={data.featured.edges} /> */}
+      <Feature data={data.featured.edges} />
       {/* <Projects /> */}
       <Contact data={data.site.siteMetadata.email} />
       <Footer data={data.site.siteMetadata} />

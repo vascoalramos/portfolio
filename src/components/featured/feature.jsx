@@ -19,13 +19,13 @@ const StyledContent = styled.div`
 const StyledLabel = styled.h4`
   font-weight: normal;
   color: #4ddbff;
-  font-family: Space Monde;
+  font-family: Space Mono;
   margin-top: 10px;
   padding-top: 0;
+  font-size: 13px;
 `;
 
 const StyledProjectName = styled.h5`
-  font-size: 28px;
   margin: 0 0 20px;
 `;
 
@@ -139,6 +139,7 @@ const Featured = ({ data }) => {
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         aria-label="External Link"
+                        style={{ fontSize: '28px' }}
                       >
                         {title}
                       </a>
