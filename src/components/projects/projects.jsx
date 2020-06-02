@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
-import Title from '../Title/Title';
+import Title from '../title/title';
 import ProjectImg from '../Image/ProjectImg';
 
 const Projects = () => {

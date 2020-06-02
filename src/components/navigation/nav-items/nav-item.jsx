@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -24,5 +25,10 @@ const NavItem = ({ children, clicked, ...rest }) => (
     {children}
   </StyledLink>
 );
+
+NavItem.propTypes = {
+  children: PropTypes.objectOf(PropTypes.object).isRequired,
+  clicked: PropTypes.bool,
+};
 
 export default NavItem;

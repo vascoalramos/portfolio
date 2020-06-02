@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v1 as uuidv1 } from 'uuid';
-import Title from '../Title/Title';
+import Title from '../title/title';
 import ProjectImg from '../Image/ProjectImg';
 
 const StyledContainer = styled.div`

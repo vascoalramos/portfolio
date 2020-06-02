@@ -3,14 +3,14 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import Hero from './Hero/Hero';
-import About from './About/About';
+import Hero from './hero/hero';
+import About from './about/about';
 // import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
-import Navbar from './Navigation/Navbar';
+import Contact from './contact/contact';
+import Footer from './footer/footer';
+import Navbar from './navigation/navbar';
 // import Feature from './featured/feature';
-import SEO from './SEO';
+import SEO from './seo';
 
 library.add(fab, fas);
 

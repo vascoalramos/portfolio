@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
-import Title from '../Title/Title';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import Title from '../title/title';
 
 const About = ({ data }) => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -40,22 +40,21 @@ const About = ({ data }) => {
               <div>
                 <div
                   className="about-wrapper__info-text"
+                  // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: data.html }}
                   style={{ textAlign: 'justify' }}
                 />
-                {
-                  <span className={isMobile ? '' : 'd-flex mt-5'}>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      title="Download my resume"
-                      href={data.frontmatter.resume}
-                    >
-                      Resume
-                    </a>
-                  </span>
-                }
+                <span className={isMobile ? '' : 'd-flex mt-5'}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn cta-btn--resume"
+                    title="Download my resume"
+                    href={data.frontmatter.resume}
+                  >
+                    Resume
+                  </a>
+                </span>
               </div>
             </Fade>
           </Col>
@@ -66,7 +65,7 @@ const About = ({ data }) => {
 };
 
 About.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default About;
