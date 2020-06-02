@@ -11,6 +11,8 @@ module.exports = {
     social: [
       { name: 'linkedin', url: 'https://linkedin.com/in/vascoalramos' },
       { name: 'github', url: 'https://github.com/vascoalramos' },
+      { name: 'gitlab', url: 'https://gitlab.com/vascoalramos' },
+      { name: 'dev', url: 'https://dev.to/vascoalramos' },
     ],
   },
   plugins: [

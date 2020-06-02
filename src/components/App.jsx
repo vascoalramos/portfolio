@@ -1,5 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import Hero from './Hero/Hero';
 import About from './About/About';
 // import Projects from './Projects/Projects';
@@ -8,6 +11,8 @@ import Footer from './Footer/Footer';
 import Navbar from './Navigation/Navbar';
 // import Feature from './featured/feature';
 import SEO from './SEO';
+
+library.add(fab, fas);
 
 const App = () => {
   const data = useStaticQuery(graphql`
