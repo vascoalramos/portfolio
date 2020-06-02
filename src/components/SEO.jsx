@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 const SEO = ({ data }) => {
   const metaDescription = data.description;
   const metaImage = `${data.siteUrl}/${data.imageShare}`;
-  const lang = data.lang;
+  const { lang } = data;
 
   return (
     <Helmet
@@ -43,7 +43,7 @@ const SEO = ({ data }) => {
 };
 
 SEO.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default SEO;

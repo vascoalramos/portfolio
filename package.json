@@ -9,8 +9,9 @@
     "deploy": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "lint": "eslint --fix",
     "serve": "gatsby serve",
+    "upgrade-interactive": "npm-check --update",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
@@ -39,28 +40,29 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-github-btn": "^1.2.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.27",
     "react-tilt": "^0.1.4",
     "styled-components": "^5.1.1",
-    "uuid": "^3.4.0"
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "env-cmd": "^10.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "gh-pages": "^2.2.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "gh-pages": "^3.0.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.2",
-    "prettier": "^1.19.1"
+    "npm-check": "^5.9.2",
+    "prettier": "^2.0.5"
   },
   "repository": {
     "type": "git",

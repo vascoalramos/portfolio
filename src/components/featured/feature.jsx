@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { v1 as uuidv1 } from 'uuid';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
@@ -9,11 +9,13 @@ const StyledContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `;
+
 const StyledContent = styled.div`
   position: relative;
   grid-column: 1 / 7;
   grid-row: 1 / -1;
 `;
+
 const StyledLabel = styled.h4`
   font-weight: normal;
   color: #4ddbff;
@@ -21,10 +23,12 @@ const StyledLabel = styled.h4`
   margin-top: 10px;
   padding-top: 0;
 `;
+
 const StyledProjectName = styled.h5`
   font-size: 28px;
   margin: 0 0 20px;
 `;
+
 const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
@@ -33,6 +37,7 @@ const StyledDescription = styled.div`
     margin: 0;
   }
 `;
+
 const StyledTechList = styled.ul`
   position: relative;
   z-index: 2;
@@ -50,6 +55,7 @@ const StyledTechList = styled.ul`
     }
   }
 `;
+
 const StyledLinkWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -64,13 +70,7 @@ const StyledLinkWrapper = styled.div`
     }
   }
 `;
-const StyledFeaturedImg = styled(Img)`
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
-`;
+
 const StyledImgContainer = styled.a`
   grid-column: 6 / -1;
   grid-row: 1 / -1;
@@ -94,6 +94,7 @@ const StyledImgContainer = styled.a`
     mix-blend-mode: screen;
   }
 `;
+
 const StyledProject = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -110,10 +111,7 @@ const StyledProject = styled.div`
 const Featured = ({ data }) => {
   const featuredProjects = data.filter(({ node }) => node);
 
-  const revealTitle = useRef(null);
   const revealProjects = useRef([]);
-
-  console.log(data);
 
   return (
     <StyledContainer id="projects">
@@ -126,7 +124,12 @@ const Featured = ({ data }) => {
             const { external, title, tech, github, image } = frontmatter;
 
             return (
-              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
+              <StyledProject
+                key={uuidv1()}
+                ref={(el) => {
+                  revealProjects.current[i] = el;
+                }}
+              >
                 <StyledContent>
                   <StyledLabel>Featured Project</StyledLabel>
                   <StyledProjectName>
@@ -146,8 +149,8 @@ const Featured = ({ data }) => {
                   <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
                   {tech && (
                     <StyledTechList>
-                      {tech.map((tech, i) => (
-                        <li key={i}>{tech}</li>
+                      {tech.map((entry) => (
+                        <li key={uuidv1()}>{entry.tech}</li>
                       ))}
                     </StyledTechList>
                   )}
@@ -159,7 +162,7 @@ const Featured = ({ data }) => {
                         rel="nofollow noopener noreferrer"
                         aria-label="GitHub Link"
                       >
-                        <i className={`fa fa-github fa-inverse`} />
+                        <i className="fa fa-github fa-inverse" />
                       </a>
                     )}
                     {external && (
@@ -169,14 +172,14 @@ const Featured = ({ data }) => {
                         rel="nofollow noopener noreferrer"
                         aria-label="External Link"
                       >
-                        <i className={`fa fa-globe fa-inverse`} />
+                        <i className="fa fa-globe fa-inverse" />
                       </a>
                     )}
                   </StyledLinkWrapper>
                 </StyledContent>
 
                 <StyledImgContainer
-                  href={external ? external : github ? github : '#'}
+                  href={external || github || '#'}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
@@ -191,7 +194,7 @@ const Featured = ({ data }) => {
 };
 
 Featured.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Featured;

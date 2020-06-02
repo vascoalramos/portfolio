@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import uuidv1 from 'uuid/v1';
+import { v1 as uuidv1 } from 'uuid';
 import PropTypes from 'prop-types';
 
 const Footer = ({ data }) => {
@@ -11,7 +11,7 @@ const Footer = ({ data }) => {
           <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
         </a>
         <div className="social-links">
-          {data.social.map(entry => {
+          {data.social.map((entry) => {
             const { name, url } = entry;
             return (
               <a
@@ -33,11 +33,12 @@ const Footer = ({ data }) => {
           <i
             className="fa fa-heart px-2"
             style={{ color: 'rgb(220, 53, 69)', fontSize: '1.8rem' }}
-          ></i>{' '}
+          />{' '}
           by{' '}
-          {data.social.map(entry => {
-            const { name, url } = entry;
-            if (name === 'github') {
+          {data.social
+            .filter((entry) => entry.name === 'github')
+            .map((entry) => {
+              const { url } = entry;
               return (
                 <a
                   key={uuidv1()}
@@ -49,8 +50,7 @@ const Footer = ({ data }) => {
                   Vasco Ramos
                 </a>
               );
-            }
-          })}
+            })}
         </p>
       </Container>
     </footer>
@@ -58,7 +58,7 @@ const Footer = ({ data }) => {
 };
 
 Footer.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default Footer;

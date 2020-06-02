@@ -22,8 +22,8 @@ const ProjectImg = ({ filename, alt }) => (
         }
       }
     `}
-    render={data => {
-      const image = data.images.edges.find(n => {
+    render={(data) => {
+      const image = data.images.edges.find((n) => {
         return n.node.relativePath.includes(filename);
       });
 
