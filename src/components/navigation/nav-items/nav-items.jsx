@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTrail, animated, config } from 'react-spring';
+import PropTypes from 'prop-types';
+import NavItem from './nav-item';
 
-import NavItem from './navItem';
-
-var LINKS = [
+/*
+TODO: use this later
+const LINKS = [
   { name: 'About', to: '#about' },
   { name: 'Experience', to: '#experience' },
   { name: 'Projects', to: '#projects' },
@@ -12,12 +14,12 @@ var LINKS = [
   { name: 'Skills', to: '#skills' },
   { name: 'Contacts', to: '#contact' },
 ];
+*/
 
-var LINKS = [
+const LINKS = [
   { name: 'About', to: '#about' },
   { name: 'Contacts', to: '#contact' },
 ];
-// in the end change again to const
 
 const StyledNav = styled.nav`
   display: flex;
@@ -68,6 +70,11 @@ const NavItems = ({ mobile, clicked }) => {
       </a>
     </StyledNav>
   );
+};
+
+NavItems.propTypes = {
+  mobile: PropTypes.bool.isRequired,
+  clicked: PropTypes.bool.isRequired,
 };
 
 export default NavItems;

@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTransition, config } from 'react-spring';
-
-import HamburgerToggler from './HamburgerToggle';
-import SideDrawer from './SideDrawer';
+import HamburgerToggler from './hamburger-toggle';
+import SideDrawer from './side-drawer';
 
 const MobileMenu = ({ menuOpened, setMenuOpened }) => {
   // Animation for the side drawer
@@ -22,6 +22,11 @@ const MobileMenu = ({ menuOpened, setMenuOpened }) => {
       )}
     </>
   );
+};
+
+MobileMenu.propTypes = {
+  menuOpened: PropTypes.bool.isRequired,
+  setMenuOpened: PropTypes.bool.isRequired,
 };
 
 export default MobileMenu;

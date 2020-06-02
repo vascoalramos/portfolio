@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { animated, useSpring, config } from 'react-spring';
-
-import DesktopMenu from './DesktopMenu';
-import MobileMenu from './Mobile/MobileMenu';
-import LogoNavbar from './NavItems/LogoNavbar';
+import DesktopMenu from './desktop-menu';
+import MobileMenu from './mobile/mobile-menu';
+import LogoNavbar from './nav-items/logo-navbar';
 
 const StyledHeader = styled(animated.header)`
   position: fixed;
@@ -50,9 +48,8 @@ const Navbar = React.memo(() => {
   });
 
   // Change navbar content accordingly
-  const changeMobile = () => {
+  const changeMobile = () =>
     window.matchMedia('(max-width: 37.5em)').matches ? setisMobile(true) : setisMobile(false);
-  };
 
   // Event listener on resize, so when it change we check o remove desktop menu/mobile menu
   // Better than CSS media query because we dont keep both DOM nodes
@@ -77,13 +74,5 @@ const Navbar = React.memo(() => {
     </StyledHeader>
   );
 });
-
-Navbar.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Navbar.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Navbar;

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { animated } from 'react-spring';
-
-import NavItems from '../NavItems/navItems';
+import NavItems from '../nav-items/nav-items';
 // import DarkModeToggle from '../../UI/darkModeToggle';
-import useLockBodyScroll from '../UseLockScroll';
+import useLockBodyScroll from '../use-lock-scroll';
 
 const BackgroundWrapper = styled(animated.div)`
   position: fixed;
@@ -31,6 +30,7 @@ const Wrapper = styled.div`
   padding: 2rem 1rem;
 `;
 
+// eslint-disable-next-line react/prop-types
 const SideDrawer = ({ setMenuOpened, ...rest }) => {
   useLockBodyScroll();
   return (

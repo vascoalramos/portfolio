@@ -1,9 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { useTransition, animated } from 'react-spring';
+import { animated } from 'react-spring';
 
 const StyledLink = styled(Link)`
   cursor: pointer;
@@ -40,8 +39,8 @@ const LogoNavBar = () => {
       smooth="true"
       spy="true"
       title="Home"
-      // When header section is active, hide scroll to top When inactive, show scroll to top
-      onClick={() => setMenuOpened(false)}
+      // When header section is active, hide scroll to top. When inactive, show scroll to top
+      // onClick={() => setMenuOpened(false)}
     >
       {renderLogo()}
     </StyledLink>

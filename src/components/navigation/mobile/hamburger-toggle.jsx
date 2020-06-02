@@ -103,6 +103,7 @@ const StyledLabel = styled.label`
   }
 `;
 
+// eslint-disable-next-line react/prop-types
 const HamburgerToggler = ({ menuOpened, toggleChange }) => {
   return (
     <StyledLabel>
