@@ -36,7 +36,7 @@ const ProjectImg = ({ filename, alt }) => (
 );
 
 ProjectImg.propTypes = {
-  filename: PropTypes.string,
+  filename: PropTypes.objectOf(PropTypes.object),
   alt: PropTypes.string,
 };
 

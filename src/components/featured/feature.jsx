@@ -109,8 +109,6 @@ const StyledProject = styled.div`
 `;
 
 const Featured = ({ data }) => {
-  const featuredProjects = data.filter(({ node }) => node);
-
   const revealProjects = useRef([]);
 
   return (
@@ -118,8 +116,8 @@ const Featured = ({ data }) => {
       <Title title="Featured Projects" />
 
       <div>
-        {featuredProjects &&
-          featuredProjects.map(({ node }, i) => {
+        {data &&
+          data.map(({ node }, i) => {
             const { frontmatter, html } = node;
             const { external, title, tech, github, image } = frontmatter;
 

@@ -65,7 +65,7 @@ const About = ({ data }) => {
 };
 
 About.propTypes = {
-  data: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default About;
