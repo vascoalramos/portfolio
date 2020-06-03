@@ -27,7 +27,7 @@ const NavItem = ({ children, clicked, ...rest }) => (
 );
 
 NavItem.propTypes = {
-  children: PropTypes.objectOf(PropTypes.object).isRequired,
+  children: PropTypes.instanceOf(Array).isRequired,
   clicked: PropTypes.bool,
 };
 

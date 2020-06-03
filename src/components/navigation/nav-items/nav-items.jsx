@@ -73,8 +73,8 @@ const NavItems = ({ mobile, clicked }) => {
 };
 
 NavItems.propTypes = {
-  mobile: PropTypes.bool.isRequired,
-  clicked: PropTypes.bool.isRequired,
+  mobile: PropTypes.bool,
+  clicked: PropTypes.bool,
 };
 
 export default NavItems;

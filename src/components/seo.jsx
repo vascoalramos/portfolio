@@ -43,7 +43,7 @@ const SEO = ({ data }) => {
 };
 
 SEO.propTypes = {
-  data: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.any),
 };
 
 export default SEO;
