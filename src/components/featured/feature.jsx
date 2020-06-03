@@ -29,7 +29,7 @@ const StyledLabel = styled.h4`
 `;
 
 const StyledProjectName = styled.h5`
-  margin: 0 0 20px;
+  margin: 15px 0 30px;
 
   a {
     color: white;
@@ -42,7 +42,7 @@ const StyledDescription = styled.div`
   box-shadow: 0 10px 30px -15px #041a3d;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-color: #1b3763;
-
+  border-radius: 3px;
   position: relative;
   z-index: 2;
   padding: 25px;
@@ -95,6 +95,7 @@ const StyledImgContainer = styled.a`
   position: relative;
   z-index: 1;
   background-color: #4ddbff;
+  border-radius: 5px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   &:hover,
   &:focus {
@@ -178,82 +179,100 @@ const Featured = ({ data }) => {
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, image } = frontmatter;
-
-            return (
-              <StyledProject
-                key={uuidv1()}
-                ref={(el) => {
-                  revealProjects.current[i] = el;
-                }}
-              >
-                <StyledContent>
-                  <StyledLabel>Featured Project</StyledLabel>
-                  <StyledProjectName>
-                    {external ? (
-                      <a
-                        href={external}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link"
-                      >
-                        {title}
-                      </a>
-                    ) : (
-                      title
-                    )}
-                  </StyledProjectName>
-                  <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
-                  {tech && (
-                    <StyledTechList>
-                      {tech.map((entry) => (
-                        <li key={uuidv1()}>{entry}</li>
-                      ))}
-                    </StyledTechList>
-                  )}
-                  <StyledLinkWrapper>
-                    {github && (
-                      <a
-                        href={github}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="GitHub Link"
-                      >
-                        <FontAwesomeIcon
-                          icon={['fab', 'github']}
-                          size="2x"
-                          inverse
-                          style={{ fontSize: '2.5rem' }}
-                        />
-                      </a>
-                    )}
-                    {external && (
-                      <a
-                        href={external}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link"
-                      >
-                        <FontAwesomeIcon
-                          icon="globe"
-                          inverse
-                          size="2x"
-                          style={{ fontSize: '2.5rem' }}
-                        />
-                      </a>
-                    )}
-                  </StyledLinkWrapper>
-                </StyledContent>
-
-                <StyledImgContainer
-                  href={external || github || '#'}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
+            const { external, title, tech, github, gitlab, image, showInProjects } = frontmatter;
+            let element = null;
+            if (showInProjects) {
+              element = (
+                <StyledProject
+                  key={uuidv1()}
+                  ref={(el) => {
+                    revealProjects.current[i] = el;
+                  }}
                 >
-                  <ProjectImg alt={`${title} picture`} filename={image.relativePath} />
-                </StyledImgContainer>
-              </StyledProject>
-            );
+                  <StyledContent>
+                    <StyledLabel>Featured Project</StyledLabel>
+                    <StyledProjectName>
+                      {external ? (
+                        <a
+                          href={external}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="External Link"
+                        >
+                          {title}
+                        </a>
+                      ) : (
+                        title
+                      )}
+                    </StyledProjectName>
+                    <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
+                    {tech && (
+                      <StyledTechList>
+                        {tech.map((entry) => (
+                          <li key={uuidv1()}>{entry}</li>
+                        ))}
+                      </StyledTechList>
+                    )}
+                    <StyledLinkWrapper>
+                      {github && (
+                        <a
+                          href={github}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="GitHub Link"
+                        >
+                          <FontAwesomeIcon
+                            icon={['fab', 'github']}
+                            size="2x"
+                            inverse
+                            style={{ fontSize: '2.5rem' }}
+                          />
+                        </a>
+                      )}
+                      {gitlab && (
+                        <a
+                          href={gitlab}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="GitLab Link"
+                        >
+                          <FontAwesomeIcon
+                            icon={['fab', 'gitlab']}
+                            size="2x"
+                            inverse
+                            style={{ fontSize: '2.5rem' }}
+                          />
+                        </a>
+                      )}
+                      {external && (
+                        <a
+                          href={external}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="External Link"
+                        >
+                          <FontAwesomeIcon
+                            icon="globe"
+                            inverse
+                            size="2x"
+                            style={{ fontSize: '2.5rem' }}
+                          />
+                        </a>
+                      )}
+                    </StyledLinkWrapper>
+                  </StyledContent>
+
+                  <StyledImgContainer
+                    href={external || github || '#'}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <ProjectImg alt={`${title} picture`} filename={image.relativePath} />
+                  </StyledImgContainer>
+                </StyledProject>
+              );
+            }
+            return element;
           })}
       </div>
     </StyledContainer>

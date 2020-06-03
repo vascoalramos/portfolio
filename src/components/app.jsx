@@ -30,7 +30,9 @@ const App = () => {
               }
               tech
               github
+              gitlab
               external
+              showInProjects
             }
             html
           }
