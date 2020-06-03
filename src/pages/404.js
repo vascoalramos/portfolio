@@ -13,12 +13,6 @@ import SEO from '../components/seo';
 export default () => {
   const data = useStaticQuery(graphql`
     {
-      site: site {
-        siteMetadata {
-          title
-          description
-        }
-      }
       hero: markdownRemark(fileAbsolutePath: { regex: "/hero.md/" }) {
         frontmatter {
           salute
