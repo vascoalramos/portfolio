@@ -35,7 +35,7 @@ const LogoNavBar = () => {
   // If is not a section from the index(no one page scroll link), render the gatsby link instead
   return (
     <StyledLink
-      to=""
+      to="/"
       smooth="true"
       spy="true"
       title="Home"
