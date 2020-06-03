@@ -6,9 +6,14 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../components/footer/footer';
 import Navbar from '../components/navigation/navbar';
 import SEO from '../components/seo';
+
+library.add(fab, fas);
 
 export default () => {
   const data = useStaticQuery(graphql`
