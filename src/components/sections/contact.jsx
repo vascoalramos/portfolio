@@ -2,7 +2,7 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Title from '../title/title';
+import Title from '../title';
 
 const Contact = ({ data }) => {
   return (

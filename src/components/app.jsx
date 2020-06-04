@@ -3,13 +3,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import Hero from './hero/hero';
-import About from './about/about';
+import Hero from './sections/hero';
+import About from './sections/about';
 // import Projects from './Projects/Projects';
-import Contact from './contact/contact';
-import Footer from './footer/footer';
+import Contact from './sections/contact';
+import Footer from './footer';
 import Navbar from './navigation/navbar';
-import Feature from './featured/feature';
+import Feature from './sections/feature';
 import SEO from './seo';
 
 library.add(fab, fas);
@@ -26,7 +26,11 @@ const App = () => {
             frontmatter {
               title
               image {
-                relativePath
+                childImageSharp {
+                  fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
               }
               tech
               github

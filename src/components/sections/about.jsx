@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
-import Title from '../title/title';
+import Title from '../title';
 
 const About = ({ data }) => {
   const [isDesktop, setIsDesktop] = useState(false);

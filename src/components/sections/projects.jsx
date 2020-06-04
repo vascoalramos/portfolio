@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
-import Title from '../title/title';
-import ProjectImg from '../image/project-img';
+import Title from '../title';
+import ProjectImg from '../project-img';
 
 const Projects = () => {
   const projects = []; // removed context

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v1 as uuidv1 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Title from '../title/title';
-import { ProjectImg, StyledFeaturedImg } from '../image/project-img';
+import Img from 'gatsby-image';
+import Title from '../title';
 
 const StyledContainer = styled.section`
   justify-content: center;
@@ -126,6 +126,23 @@ const StyledLinkWrapper = styled.div`
   margin-left: -10px;
   a {
     padding: 10px;
+  }
+`;
+
+const StyledFeaturedImg = styled(Img)`
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+
+  @media (max-width: 768px) {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    filter: grayscale(100%) contrast(1) brightness(80%);
   }
 `;
 
@@ -254,6 +271,7 @@ const Featured = ({ data }) => {
             const { frontmatter, html } = node;
             const { external, title, tech, github, gitlab, image, showInProjects } = frontmatter;
             let element = null;
+
             if (showInProjects) {
               element = (
                 <StyledProject
@@ -340,7 +358,10 @@ const Featured = ({ data }) => {
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                   >
-                    <ProjectImg alt={`${title} picture`} filename={image.relativePath} />
+                    <StyledFeaturedImg
+                      alt={`${title} picture`}
+                      fluid={image.childImageSharp.fluid}
+                    />
                   </StyledImgContainer>
                 </StyledProject>
               );
