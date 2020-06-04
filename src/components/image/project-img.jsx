@@ -12,6 +12,13 @@ export const StyledFeaturedImg = styled(Img)`
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
+
+  @media (max-width: 768px) {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    filter: grayscale(100%) contrast(1) brightness(80%);
+  }
 `;
 
 export const ProjectImg = ({ filename, alt }) => (

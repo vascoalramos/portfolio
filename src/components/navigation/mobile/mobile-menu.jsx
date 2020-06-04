@@ -26,7 +26,7 @@ const MobileMenu = ({ menuOpened, setMenuOpened }) => {
 
 MobileMenu.propTypes = {
   menuOpened: PropTypes.bool.isRequired,
-  setMenuOpened: PropTypes.bool.isRequired,
+  setMenuOpened: PropTypes.func.isRequired,
 };
 
 export default MobileMenu;

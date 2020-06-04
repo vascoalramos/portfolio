@@ -17,6 +17,16 @@ const StyledContent = styled.div`
   position: relative;
   grid-column: 1 / 7;
   grid-row: 1 / -1;
+
+  @media (max-width: 600px) {
+    grid-column: 1 / -1;
+    padding: 40px 40px 30px;
+    z-index: 5;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 25px 20px;
+  }
 `;
 
 const StyledLabel = styled.h4`
@@ -39,6 +49,21 @@ const StyledProjectName = styled.h5`
     font-size: 28px;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    color: white;
+  }
+
+  a {
+    @media (max-width: 768px) {
+      display: block;
+      font-size: 24px;
+    }
+  }
 `;
 
 const StyledDescription = styled.div`
@@ -59,6 +84,15 @@ const StyledDescription = styled.div`
   &:focus {
     box-shadow: 0 20px 30px -15px #020c1b;
   }
+
+  @media (max-width: 480px) {
+    background-color: transparent;
+    padding: 20px 0;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
 `;
 
 const StyledTechList = styled.ul`
@@ -77,6 +111,9 @@ const StyledTechList = styled.ul`
     color: #8892b0;
     &:last-of-type {
       margin-right: 0;
+    }
+    @media (max-width: 480px) {
+      margin-right: 10px;
     }
   }
 `;
@@ -100,6 +137,16 @@ const StyledImgContainer = styled.a`
   background-color: #4ddbff;
   border-radius: 6px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    grid-column: 1 / -1;
+    opacity: 0.25;
+  }
+
   &:hover,
   &:focus {
     background: transparent;
@@ -130,6 +177,11 @@ const StyledProject = styled.div`
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   margin-bottom: 100px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 70px;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -137,6 +189,15 @@ const StyledProject = styled.div`
     ${StyledContent} {
       grid-column: 7 / -1;
       text-align: right;
+
+      @media (max-width: 600px) {
+        grid-column: 1 / -1;
+        padding: 40px 40px 30px;
+      }
+
+      @media (max-width: 480px) {
+        padding: 30px 25px 20px;
+      }
     }
     ${StyledTechList} {
       justify-content: flex-end;
@@ -154,6 +215,15 @@ const StyledProject = styled.div`
     }
     ${StyledImgContainer} {
       grid-column: 1 / 8;
+
+      @media (max-width: 768px) {
+        height: 100%;
+      }
+
+      @media (max-width: 600px) {
+        grid-column: 1 / -1;
+        opacity: 0.25;
+      }
     }
   }
   &:nth-of-type(even) {
@@ -175,8 +245,8 @@ const Featured = ({ data }) => {
   const revealProjects = useRef([]);
 
   return (
-    <StyledContainer id="projects">
-      <Title title="Featured Projects" />
+    <StyledContainer id="work">
+      <Title title="Some Projects I've Built" />
 
       <div className="container">
         {data &&

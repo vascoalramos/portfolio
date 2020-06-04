@@ -19,6 +19,7 @@ const LINKS = [
 const LINKS = [
   { name: 'About', to: '#about' },
   { name: 'Contacts', to: '#contact' },
+  { name: 'Work', to: '#work' },
 ];
 
 const StyledNav = styled.nav`
