@@ -30,6 +30,9 @@ const StyledLabel = styled.h4`
 
 const StyledProjectName = styled.h5`
   margin: 15px 0 30px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
 
   a {
     color: white;
@@ -42,7 +45,7 @@ const StyledDescription = styled.div`
   box-shadow: 0 10px 30px -15px #041a3d;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-color: #1b3763;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
   z-index: 2;
   padding: 25px;
@@ -95,7 +98,7 @@ const StyledImgContainer = styled.a`
   position: relative;
   z-index: 1;
   background-color: #4ddbff;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   &:hover,
   &:focus {

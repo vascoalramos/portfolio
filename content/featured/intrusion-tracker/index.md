@@ -4,7 +4,6 @@ title: 'Intrusion Tracker'
 image: './it.png'
 github: 'https://github.com/vascoalramos/intrusion-tracker'
 gitlab: 'https://gitlab.com/intrusion-tracker/intrusion-tracker'
-external: 'http://192.168.160.220:3000'
 tech:
   - ReactJs
   - React Native

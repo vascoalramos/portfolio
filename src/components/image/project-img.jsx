@@ -8,7 +8,7 @@ export const StyledFeaturedImg = styled(Img)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
-  border-radius: 4px;
+  border-radius: 5px;
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
