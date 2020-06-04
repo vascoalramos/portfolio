@@ -7,8 +7,8 @@ gitlab: 'https://gitlab.com/intrusion-tracker/intrusion-tracker'
 tech:
   - ReactJs
   - React Native
+  - Spring Boot
   - Java
-  - Spring Boot Framework
   - Python
   - RabbitMQ
   - MySQL

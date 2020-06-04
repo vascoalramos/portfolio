@@ -6,7 +6,7 @@ github: 'https://github.com/vascoalramos/air-quality-service'
 gitlab: 'https://gitlab.com/vascoalramos/air-quality-service'
 external: 'https://tqs-air-quality-service.herokuapp.com/'
 tech:
-  - Spring Boot Framework
+  - Spring Boot
   - Java
   - Thymeleaf
   - Bootstrap
