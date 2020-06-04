@@ -9,7 +9,7 @@ import About from './about/about';
 import Contact from './contact/contact';
 import Footer from './footer/footer';
 import Navbar from './navigation/navbar';
-// import Feature from './featured/feature';
+import Feature from './featured/feature';
 import SEO from './seo';
 
 library.add(fab, fas);
@@ -26,15 +26,13 @@ const App = () => {
             frontmatter {
               title
               image {
-                childImageSharp {
-                  fixed(width: 300) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+                relativePath
               }
               tech
               github
+              gitlab
               external
+              showInProjects
             }
             html
           }
@@ -85,7 +83,7 @@ const App = () => {
       <Navbar />
       <Hero data={data.hero.frontmatter} />
       <About data={data.about} />
-      {/* <Feature data={data.featured.edges} /> */}
+      <Feature data={data.featured.edges} />
       {/* <Projects /> */}
       <Contact data={data.site.siteMetadata.email} />
       <Footer data={data.site.siteMetadata} />
