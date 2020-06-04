@@ -18,8 +18,8 @@ const LINKS = [
 
 const LINKS = [
   { name: 'About', to: '#about' },
-  { name: 'Contacts', to: '#contact' },
   { name: 'Work', to: '#work' },
+  { name: 'Contacts', to: '#contact' },
 ];
 
 const StyledNav = styled.nav`
