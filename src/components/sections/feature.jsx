@@ -2,11 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v1 as uuidv1 } from 'uuid';
-import ScrollReveal from 'scrollreveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Img from 'gatsby-image';
-import { srConfig } from '../../config';
 import Title from '../title';
+import { srConfig } from '../../config';
 
 const StyledContainer = styled.section`
   justify-content: center;
@@ -261,15 +260,15 @@ const StyledProject = styled.div`
 `;
 
 const Featured = ({ data }) => {
-  const isSSR = typeof window === 'undefined';
-  const sr = isSSR ? null : ScrollReveal();
-
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
 
   useEffect(() => {
-    sr.reveal(revealTitle.current, srConfig());
-    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    import('scrollreveal').then(({ default: ScrollReveal }) => {
+      const sr = ScrollReveal();
+      sr.reveal(revealTitle.current, srConfig());
+      revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    });
   }, []);
 
   return (
