@@ -1,4 +1,4 @@
-# Personal Portfolio Website 💻 🔥 [![GitHub](https://img.shields.io/github/license/vascoalramos/portfolio?color=blue)](https://github.com/vascoalramos/portfolio/blob/master/LICENSE.md)
+# Personal Portfolio Website 💻 🔥 [![GitHub](https://img.shields.io/github/license/vascoalramos/portfolio?color=blue)](https://github.com/vascoalramos/portfolio/blob/master/LICENSE.md) [![Actions Status](https://github.com/vascoalramos/portfolio/workflows/Gatsby%20Publish/badge.svg)](https://github.com/vascoalramos/portfolio/actions)
 
 I developed this project because of the urge I felt to have a more accurate online representation of the work I do as a student of Computer Science and Junior Engineer.
 
@@ -48,7 +48,7 @@ $ npm install
 $ npm run develop
 ```
 
-❗️ NOTE: ❗️ If your run into issues installing the dependencies, use the following commands:
+❗️ NOTE: ❗️ If you run into issues installing the dependencies, use the following commands:
 
 ```bash
 # Install dependencies with all permissions
@@ -62,7 +62,7 @@ $ npm run develop
 
 Once you have done your setup, you need to put your website online!
 
-What I chose was [Namecheap](https://namecheap.com) to domain and dns and [GitHub Pages](https://pages.github.com) to run my website!
+What I chose was [Namecheap](https://namecheap.com) to the domain and DNS and [GitHub Pages](https://pages.github.com) to run my website!
 
 Using the script I provide in [package.json](package.json) (I'm assuming your repo is already linked to your local folder and you have a gh-pages branch created), the only thing you have to do is to run the following command:
 
@@ -95,12 +95,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments 🎁
 
 - I built my portfolio based on a customised gatsby starter from [cobidev](https://github.com/cobidev) named [gatsby-simplefolio](https://github.com/cobidev/gatsby-simplefolio)
-- I draw a lot of design inspiration from [Brittany Chiang](https://github.com/bchiang7) 4th version of her own portfolio which can be found [here](https://brittanychiang.com)
+- I draw a lot of design inspiration from [Brittany Chiang](https://github.com/bchiang7) 4th version of her portfolio, which can be found [here](https://brittanychiang.com)
 
 ## Forking This Repo 🚨
 
 During the development of this project, some people have asked me if they could use this code for their own websites.
-The answer was always "yes", as long as it was some attribition. For business projects or otherwise something greater than just a personal project, that is not always the case. Thus, if in doubt, please don't think twice about asking me.
+The answer was always "yes", as long as it was some attribution. For business projects or otherwise something greater than just a personal project, that is not always the case. Thus, if in doubt, please don't think twice about asking me.
 
 I most certainly value keeping this site open source, but as you all know, plagiarism is bad. Therefore, if you want to use this code to your website or as the baseline to a personal project, all I ask is to not claim this effort as your own.
 
