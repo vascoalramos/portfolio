@@ -1,6 +1,5 @@
 /* eslint-disable import/no-cycle */
 // layout elements
-export { default as Layout } from './layout';
 export { default as Footer } from './footer';
 export { default as SEO } from './seo';
 export { default as Title } from './title';

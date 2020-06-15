@@ -2,7 +2,8 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
-import { Layout, Hero, About, Feature } from '../components';
+import { Layout } from '../templates';
+import { Hero, About, Feature } from '../components';
 
 export default () => {
   const data = useStaticQuery(graphql`
