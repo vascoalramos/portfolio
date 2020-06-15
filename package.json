@@ -18,7 +18,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "lint": "eslint --fix",
     "serve": "gatsby serve",
     "upgrade-interactive": "npm-check --update",
