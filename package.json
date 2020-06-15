@@ -65,7 +65,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "gh-pages": "^3.0.0",
     "husky": "^4.2.1",
-    "lint-staged": "^10.0.2",
+    "lint-staged": "^10.2.10",
     "npm-check": "^5.9.2",
     "prettier": "^2.0.5"
   },
