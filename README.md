@@ -72,6 +72,8 @@ Using the script I provide in [package.json](package.json) (I'm assuming your re
 $ npm run deploy
 ```
 
+Another option is to integrate the deployment of your Gatsby website with GitHub Actions via [Gatsby Publish](https://github.com/marketplace/actions/gatsby-publish).
+
 You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.me)
 
 ![Portfolio Thumbnail](thumbnail.png)
@@ -84,7 +86,7 @@ You can check my web portfolio live at: [vascoalramos.me](https://vascoalramos.m
 - [React](https://es.reactjs.org/) - Front-End JavaScript library
 - [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction) - Front-End UI library
 
-## Authors
+## Author
 
 - **Vasco Ramos:** [vascoalramos](https://github.com/vascoalramos)
 
