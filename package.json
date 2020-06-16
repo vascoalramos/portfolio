@@ -20,9 +20,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "serve": "gatsby serve",
-    "upgrade-interactive": "npm-check --update",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "husky": {
     "hooks": {
