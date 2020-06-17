@@ -49,13 +49,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/content/projects`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: `UA-156556339-1`,
