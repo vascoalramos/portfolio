@@ -18,8 +18,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-transformer-remark',
     {
@@ -39,15 +44,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'blog',
+        path: `${__dirname}/content/blog`,
       },
     },
     {

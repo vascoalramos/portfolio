@@ -14,4 +14,10 @@ module.exports = {
     viewFactor: 0.25,
     viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
   }),
+
+  navLinks: [
+    { name: 'About', url: '#about' },
+    { name: 'Work', url: '#work' },
+    { name: 'Contacts', url: '#contact' },
+  ],
 };

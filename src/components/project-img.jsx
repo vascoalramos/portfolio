@@ -21,7 +21,7 @@ export const StyledFeaturedImg = styled(Img)`
   }
 `;
 
-export const ProjectImg = ({ filename, alt }) => (
+const ProjectImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -57,3 +57,5 @@ ProjectImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
 };
+
+export default ProjectImg;

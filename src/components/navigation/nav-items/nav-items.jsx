@@ -3,24 +3,7 @@ import styled from 'styled-components';
 import { useTrail, animated, config } from 'react-spring';
 import PropTypes from 'prop-types';
 import NavItem from './nav-item';
-
-/*
-TODO: use this later
-const LINKS = [
-  { name: 'About', to: '#about' },
-  { name: 'Experience', to: '#experience' },
-  { name: 'Projects', to: '#projects' },
-  { name: 'Education', to: '#education' },
-  { name: 'Skills', to: '#skills' },
-  { name: 'Contacts', to: '#contact' },
-];
-*/
-
-const LINKS = [
-  { name: 'About', to: '#about' },
-  { name: 'Work', to: '#work' },
-  { name: 'Contacts', to: '#contact' },
-];
+import { navLinks } from '../../../config';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -33,7 +16,7 @@ const StyledNav = styled.nav`
 
 const NavItems = ({ mobile, clicked }) => {
   // Animation
-  const navItemsTrail = useTrail(LINKS.length, {
+  const navItemsTrail = useTrail(navLinks.length, {
     config: config.wobbly,
     delay: 300,
     opacity: 1,
@@ -49,13 +32,13 @@ const NavItems = ({ mobile, clicked }) => {
   return (
     <StyledNav mobile={mobile ? 1 : 0}>
       {navItemsTrail.map((propStyles, index) => (
-        <animated.div key={LINKS[index].name} style={propStyles}>
-          <NavItem to={LINKS[index].to} clicked={clicked}>
+        <animated.div key={navLinks[index].name} style={propStyles}>
+          <NavItem to={navLinks[index].url} clicked={clicked}>
             <span style={{ color: '#4ddbff' }}>
               {0}
               {index + 1}.{' '}
             </span>
-            {LINKS[index].name}
+            {navLinks[index].name}
           </NavItem>
         </animated.div>
       ))}

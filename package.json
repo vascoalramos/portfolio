@@ -1,19 +1,39 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal Website",
   "version": "1.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vascoalramos/portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/vascoalramos/portfolio/issues"
+  },
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "lint": "eslint --fix",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "serve": "gatsby serve",
-    "upgrade-interactive": "npm-check --update",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,json,css,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -68,27 +88,5 @@
     "lint-staged": "^10.2.10",
     "npm-check": "^5.9.2",
     "prettier": "^2.0.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.+(json|css|md)": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
