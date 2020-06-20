@@ -1,4 +1,4 @@
-# Personal Portfolio Website 💻 🔥 [![GitHub](https://img.shields.io/github/license/vascoalramos/portfolio?color=blue)](https://github.com/vascoalramos/portfolio/blob/master/LICENSE.md) ![Gatsby Publish](https://github.com/vascoalramos/portfolio/workflows/Gatsby%20Publish/badge.svg)
+# Personal Portfolio Website 💻 🔥 [![GitHub](https://img.shields.io/github/license/vascoalramos/portfolio?color=blue)](https://github.com/vascoalramos/portfolio/blob/master/LICENSE.md) ![Gatsby Publish](https://github.com/vascoalramos/portfolio/workflows/Gatsby%20Publish/badge.svg) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/vascoalramos/portfolio.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/vascoalramos/portfolio/context:javascript)
 
 I developed this project because of the urge I felt to have a more accurate online representation of the work I do as a student of Computer Science and Junior Engineer.
 
