@@ -53,7 +53,7 @@
     "gatsby-plugin-sass": "^2.3.10",
     "gatsby-plugin-sharp": "^2.6.18",
     "gatsby-plugin-sitemap": "^2.4.10",
-    "gatsby-plugin-styled-components": "^3.3.8",
+    "gatsby-plugin-styled-components": "^3.3.9",
     "gatsby-plugin-transitions": "^2.1.6",
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-transformer-remark": "^2.8.23",
