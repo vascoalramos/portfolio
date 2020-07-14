@@ -40,7 +40,7 @@ const PostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
   return (
-    <Layout isPost>
+    <Layout>
       <StyledPostContainer>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>

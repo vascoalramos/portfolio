@@ -10,7 +10,7 @@ import { GlobalStyle } from '../styles';
 
 library.add(fab, fas);
 
-const Layout = ({ children, isPost }) => {
+const Layout = ({ children, isPage }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -46,7 +46,7 @@ const Layout = ({ children, isPost }) => {
           <SEO data={site.siteMetadata} />
           <Navbar />
           {children}
-          {!isPost && <Contact data={site.siteMetadata.email} />}
+          {isPage && <Contact data={site.siteMetadata.email} />}
           <Footer data={site.siteMetadata} />
         </div>
       )}
@@ -56,7 +56,7 @@ const Layout = ({ children, isPost }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isPost: PropTypes.bool.isRequired,
+  isPage: PropTypes.bool.isRequired,
 };
 
 export default Layout;

@@ -60,7 +60,7 @@ export default () => {
   );
 
   return (
-    <Layout>
+    <Layout isPage>
       <Hero data={data.hero.frontmatter} />
       <About data={data.about} />
       <Feature data={data.featured.edges} />
