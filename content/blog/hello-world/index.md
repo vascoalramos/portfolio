@@ -2,10 +2,11 @@
 title: Hello World
 description: This is the first post of my new personal blog.
 date: '2020-06-14'
-draft: true
+draft: false
 slug: '/blog/hello-world'
 tags:
   - hello-world
+  - ola
 
 # extra dev.to fields
 canonical_url: 'vascoalramos.me/blog/hello-world'
