@@ -80,6 +80,7 @@ module.exports = {
                 return {
                   title: edge.node.frontmatter.title,
                   date: edge.node.frontmatter.date,
+                  description: edge.note.frontmatter.description,
                   tags: edge.node.frontmatter.tags,
                   url: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.slug}`,
                   custom_elements: [{ 'content:encoded': edge.node.rawMarkdownBody }],
@@ -99,6 +100,7 @@ module.exports = {
                   edges {
                     node {
                       frontmatter {
+                        description
                         slug
                         title
                         date
