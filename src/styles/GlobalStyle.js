@@ -141,7 +141,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   p {
-    margin: 0 0 1rem 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 150%;
+
     & > a {
       ${mixins.inlineLink};
     }
