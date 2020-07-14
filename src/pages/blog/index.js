@@ -121,6 +121,7 @@ const StyledTags = styled.ul`
       margin-right: 0;
     }
     a {
+      font-size: ${fontSizes.xs};
       ${mixins.inlineLink};
     }
   }
@@ -134,7 +135,7 @@ const BlogPage = ({ data }) => {
       <StyledMainContainer>
         <header>
           <h1 className="big-title">Blog</h1>
-          <p className="subtitle">my journy of thoughts</p>
+          <p className="subtitle">my journey of thoughts</p>
         </header>
 
         <StyledGrid>
