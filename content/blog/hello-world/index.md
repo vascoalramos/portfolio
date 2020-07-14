@@ -8,7 +8,7 @@ tags:
   - hello
 
 # extra dev.to fields
-canonical_url: 'vascoalramos.me/blog/hello-world'
+canonical_url: 'https://vascoalramos.me'
 published: false
 ---
 
