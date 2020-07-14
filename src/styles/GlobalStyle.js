@@ -77,9 +77,10 @@ const GlobalStyle = createGlobalStyle`
       ${media.phone`font-size: 40px;`};
     }
     &.medium-title {
+      color: ${colors.white} !important;
       font-size: 60px;
       line-height: 1.1;
-      margin: 0;
+      margin-bottom: 1rem;
       ${media.desktop`font-size: 50px;`};
       ${media.tablet`font-size: 40px;`};
     }

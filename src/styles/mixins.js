@@ -44,17 +44,15 @@ const mixins = {
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
-    color: ${colors.link};
+    color: ${colors.green};
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.linkHover};
-      text-decoration: none,
+      color: ${colors.green};
       &:after {
         width: 100%;
       }
       & > * {
-        color: ${colors.linkHover} !important;
         transition: ${theme.transition};
       }
     }
