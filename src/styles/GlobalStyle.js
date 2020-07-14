@@ -236,7 +236,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     margin-bottom: 50px;
     color: ${colors.green};
-    background-color: transparent;
+    background-color: transparent !important;
     .arrow {
       display: block;
       margin-right: 10px;
