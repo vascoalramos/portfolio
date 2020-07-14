@@ -5,13 +5,12 @@
  */
 
 const path = require('path');
-// eslint-disable-next-line no-unused-vars
 const _ = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve('src/templates/post.jsx');
-  // const tagTemplate = path.resolve('src/templates/tag.jsx');
+  const tagTemplate = path.resolve('src/templates/tag.jsx');
 
   const result = await graphql(`
     {
@@ -53,7 +52,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  /*
   // Extract tag data from query
   const tags = result.data.tagsGroup.group;
   // Make tag pages
@@ -66,7 +64,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
-  */
 };
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig

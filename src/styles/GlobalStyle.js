@@ -233,7 +233,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .breadcrumb {
-    display: flex;
     align-items: center;
     margin-bottom: 50px;
     color: ${colors.green};
