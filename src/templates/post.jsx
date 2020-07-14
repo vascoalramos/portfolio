@@ -33,6 +33,7 @@ const StyledPostContent = styled.div`
     margin: 1em 0;
     line-height: 1.5;
     color: ${colors.white};
+    align-text: justify;
   }
 `;
 
@@ -68,7 +69,10 @@ const PostTemplate = ({ data }) => {
           </p>
         </StyledPostHeader>
 
-        <StyledPostContent dangerouslySetInnerHTML={{ __html: html }} />
+        <StyledPostContent
+          dangerouslySetInnerHTML={{ __html: html }}
+          style={{ textAlign: 'justify' }}
+        />
       </StyledPostContainer>
     </Layout>
   );
