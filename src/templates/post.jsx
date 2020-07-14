@@ -1,13 +1,15 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { v1 as uuidv1 } from 'uuid';
-import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Layout from './layout';
+import { Main, theme } from '../styles';
 
-const StyledPostContainer = styled.div`
+const { colors } = theme;
+
+const StyledPostContainer = styled(Main)`
   max-width: 1000px;
 `;
 const StyledPostHeader = styled.header`
@@ -16,6 +18,7 @@ const StyledPostHeader = styled.header`
     margin-right: 10px;
   }
 `;
+
 const StyledPostContent = styled.div`
   margin-bottom: 100px;
   h1,
@@ -29,24 +32,20 @@ const StyledPostContent = styled.div`
   p {
     margin: 1em 0;
     line-height: 1.5;
+    color: ${colors.white};
+    align-text: justify;
   }
 `;
 
-const PostTemplate = ({ data, location }) => {
+const PostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
-
   return (
-    <Layout location={location}>
-      <Helmet>
-        <title>{title} | Brittany Chiang</title>
-        <link rel="canonical" href="https://brittanychiang.com/pensieve" />
-      </Helmet>
-
+    <Layout>
       <StyledPostContainer>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
-          <Link to="/pensieve">All memories</Link>
+          <Link to="/blog">Blog</Link>
         </span>
 
         <StyledPostHeader>
@@ -70,7 +69,10 @@ const PostTemplate = ({ data, location }) => {
           </p>
         </StyledPostHeader>
 
-        <StyledPostContent dangerouslySetInnerHTML={{ __html: html }} />
+        <StyledPostContent
+          dangerouslySetInnerHTML={{ __html: html }}
+          style={{ textAlign: 'justify' }}
+        />
       </StyledPostContainer>
     </Layout>
   );
@@ -80,7 +82,6 @@ export default PostTemplate;
 
 PostTemplate.propTypes = {
   data: PropTypes.objectOf(PropTypes.object),
-  location: PropTypes.objectOf(PropTypes.object),
 };
 
 export const pageQuery = graphql`

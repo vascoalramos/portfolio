@@ -45,7 +45,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/blog/`,
       },
     },
     {
@@ -70,5 +70,49 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return {
+                  title: edge.node.frontmatter.title,
+                  date: edge.node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.slug}`,
+                  custom_elements: [{ 'content:encoded': edge.node.rawMarkdownBody }],
+                };
+              });
+            },
+            query: `
+              {
+                site {
+                  siteMetadata {
+                    siteUrl
+                  }
+                }
+                allMarkdownRemark(
+                  filter: { fileAbsolutePath: { regex: "/blog/" } }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        slug
+                        title
+                        date
+                      }
+                      rawMarkdownBody
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'My feed',
+          },
+        ],
+      },
+    },
   ],
 };
