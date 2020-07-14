@@ -6,7 +6,6 @@ draft: false
 slug: '/blog/hello-world'
 tags:
   - hello-world
-  - ola
 
 # extra dev.to fields
 canonical_url: 'vascoalramos.me/blog/hello-world'
