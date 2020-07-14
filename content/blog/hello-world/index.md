@@ -5,7 +5,7 @@ date: '2020-06-14'
 draft: false
 slug: '/blog/hello-world'
 tags:
-  - hello-world
+  - hello
 
 # extra dev.to fields
 canonical_url: 'vascoalramos.me/blog/hello-world'
