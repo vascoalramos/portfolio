@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 import { Layout } from '../templates';
-import { Hero, About, Feature } from '../components';
+import { Hero, About, Feature, Projects } from '../components';
 
 export default () => {
   const data = useStaticQuery(
@@ -29,6 +29,25 @@ export default () => {
                 gitlab
                 external
                 showInProjects
+              }
+              html
+            }
+          }
+        }
+        projects: allMarkdownRemark(
+          filter: {
+            fileAbsolutePath: { regex: "/projects/" }
+            frontmatter: { showInProjects: { ne: false } }
+          }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                tech
+                github
+                external
               }
               html
             }
@@ -64,7 +83,7 @@ export default () => {
       <Hero data={data.hero.frontmatter} />
       <About data={data.about} />
       <Feature data={data.featured.edges} />
-      {/* <Projects /> */}
+      <Projects data={data.projects.edges} />
     </Layout>
   );
 };
