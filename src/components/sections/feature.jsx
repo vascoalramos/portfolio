@@ -80,6 +80,9 @@ const StyledDescription = styled.div`
     font-size: 15px;
     color: #a8b2d1;
   }
+  a {
+    font-size: 15px;
+  }
 
   &:hover,
   &:focus {
