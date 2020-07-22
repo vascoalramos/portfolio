@@ -47,6 +47,7 @@ export default () => {
                 title
                 tech
                 github
+                gitlab
                 external
               }
               html

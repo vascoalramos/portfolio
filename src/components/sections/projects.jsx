@@ -16,7 +16,7 @@ const StyledContainer = styled.section`
   align-items: flex-start;
 `;
 const StyledTitle = styled.h4`
-  margin: 0 auto;
+  margin: 0 auto 1.75rem auto;
   font-size: ${fontSizes.h3};
   ${media.tablet`font-size: 24px;`};
   a {
@@ -99,6 +99,7 @@ const StyledProjectDescription = styled.div`
   font-size: ${fontSizes.sm};
   color: ${colors.lightSlate};
   a {
+    font-size: ${fontSizes.sm};
     ${mixins.inlineLink};
   }
   p {
@@ -126,6 +127,8 @@ const StyledTechList = styled.ul`
 `;
 const StyledMoreButton = styled.button`
   margin: 100px auto 0;
+  display: block;
+  background-color: transparent;
 `;
 
 const Projects = ({ data }) => {
@@ -154,14 +157,13 @@ const Projects = ({ data }) => {
       <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
         view the archive
       </StyledArchiveLink>
-
       <div className="container">
         <StyledGrid>
           <TransitionGroup className="projects">
             {projectsToShow &&
               projectsToShow.map(({ node }, i) => {
                 const { frontmatter, html } = node;
-                const { github, external, title, tech } = frontmatter;
+                const { github, gitlab, external, title, tech } = frontmatter;
                 return (
                   <CSSTransition
                     key={uuidv1()}
@@ -206,6 +208,21 @@ const Projects = ({ data }) => {
                                   />
                                 </StyledIconLink>
                               )}
+                              {gitlab && (
+                                <StyledIconLink
+                                  href={gitlab}
+                                  target="_blank"
+                                  rel="nofollow noopener noreferrer"
+                                  aria-label="GitHub Link"
+                                >
+                                  <FontAwesomeIcon
+                                    icon={['fab', 'gitlab']}
+                                    size="2x"
+                                    inverse
+                                    style={{ fontSize: '2.5rem' }}
+                                  />
+                                </StyledIconLink>
+                              )}
                               {external && (
                                 <StyledIconLink
                                   href={external}
@@ -243,7 +260,7 @@ const Projects = ({ data }) => {
           </TransitionGroup>
         </StyledGrid>
 
-        <StyledMoreButton onClick={() => setShowMore(!showMore)}>
+        <StyledMoreButton onClick={() => setShowMore(!showMore)} className="cta-btn cta-btn--hero">
           Show {showMore ? 'Less' : 'More'}
         </StyledMoreButton>
       </div>
