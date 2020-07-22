@@ -15,6 +15,7 @@ tech:
   - Keras
   - YOLO v3
   - Darknet
+company: My Life
 showInProjects: false
 ---
 

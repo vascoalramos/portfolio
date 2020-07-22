@@ -193,6 +193,21 @@ const Projects = ({ data }) => {
                               />
                             </StyledFolder>
                             <StyledProjectLinks>
+                              {external && (
+                                <StyledIconLink
+                                  href={external}
+                                  target="_blank"
+                                  rel="nofollow noopener noreferrer"
+                                  aria-label="External Link"
+                                >
+                                  <FontAwesomeIcon
+                                    icon="globe"
+                                    size="2x"
+                                    inverse
+                                    style={{ fontSize: '2.5rem' }}
+                                  />
+                                </StyledIconLink>
+                              )}
                               {github && (
                                 <StyledIconLink
                                   href={github}
@@ -213,25 +228,10 @@ const Projects = ({ data }) => {
                                   href={gitlab}
                                   target="_blank"
                                   rel="nofollow noopener noreferrer"
-                                  aria-label="GitHub Link"
+                                  aria-label="GitLab Link"
                                 >
                                   <FontAwesomeIcon
                                     icon={['fab', 'gitlab']}
-                                    size="2x"
-                                    inverse
-                                    style={{ fontSize: '2.5rem' }}
-                                  />
-                                </StyledIconLink>
-                              )}
-                              {external && (
-                                <StyledIconLink
-                                  href={external}
-                                  target="_blank"
-                                  rel="nofollow noopener noreferrer"
-                                  aria-label="External Link"
-                                >
-                                  <FontAwesomeIcon
-                                    icon="globe"
                                     size="2x"
                                     inverse
                                     style={{ fontSize: '2.5rem' }}
