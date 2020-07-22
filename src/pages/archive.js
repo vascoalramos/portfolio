@@ -11,7 +11,7 @@ import { srConfig } from '../config';
 const { colors, fonts, fontSizes } = theme;
 
 const StyledMainContainer = styled(Main)`
-  padding-bottom: 100px;
+  padding-bottom: 25px;
 `;
 
 const StyledTableContainer = styled.div`
