@@ -27,7 +27,7 @@ const Header = ({ data }) => {
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
-            <a className="cta-btn cta-btn--hero" href="#about" title="About Me">
+            <a className="cta-btn cta-btn--hero" href="/#about" title="About Me">
               {data.cta}
             </a>
           </p>

@@ -33,7 +33,7 @@ const Layout = ({ children, isPage }) => {
         }
       `}
       render={({ site }) => (
-        <div id="root">
+        <div>
           <Helmet>
             <meta charSet="utf-8" />
             <title>{site.siteMetadata.title}</title>
