@@ -318,6 +318,21 @@ const Featured = ({ data }) => {
                       </StyledTechList>
                     )}
                     <StyledLinkWrapper>
+                      {external && (
+                        <a
+                          href={external}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="External Link"
+                        >
+                          <FontAwesomeIcon
+                            icon="globe"
+                            inverse
+                            size="2x"
+                            style={{ fontSize: '2.5rem' }}
+                          />
+                        </a>
+                      )}
                       {github && (
                         <a
                           href={github}
@@ -344,21 +359,6 @@ const Featured = ({ data }) => {
                             icon={['fab', 'gitlab']}
                             size="2x"
                             inverse
-                            style={{ fontSize: '2.5rem' }}
-                          />
-                        </a>
-                      )}
-                      {external && (
-                        <a
-                          href={external}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="External Link"
-                        >
-                          <FontAwesomeIcon
-                            icon="globe"
-                            inverse
-                            size="2x"
                             style={{ fontSize: '2.5rem' }}
                           />
                         </a>
