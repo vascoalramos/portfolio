@@ -40,9 +40,9 @@ const StyledTagsContainer = styled(Main)`
         font-size: ${fontSizes.sm};
         .tag {
           font: ${fonts.SpaceMono};
-          margin-right: 10px;
         }
         a {
+          margin-right: 10px;
           font: ${fonts.SpaceMono};
           font-size: 15px;
         }
@@ -92,10 +92,10 @@ const TagTemplate = ({ pageContext, data }) => {
                     tags.map((tagName) => (
                       <Link
                         key={uuidv1()}
-                        to={`/pensieve/tags/${kebabCase(tagName)}/`}
+                        to={`/blog/tags/${kebabCase(tagName)}/`}
                         className="tagName"
                       >
-                        #{tag}
+                        #{tagName}
                       </Link>
                     ))}
                 </p>
