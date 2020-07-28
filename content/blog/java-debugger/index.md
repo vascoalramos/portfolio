@@ -13,7 +13,7 @@ canonical_url: 'https://vascoalramos.me'
 published: false
 ---
 
-Recently, while working on a Java project with [IEETA Bioinformatics - UA](http://bioinformatics.ua.pt), I needed to do some serious debugging in the code. As I was new to the project and didn't have a strong knowledge of the project's codebase, I decided to use the Java debugger to inspect the behavior of the code and better understand the flow where the specific bug was occurring. That too was a challenge because I had never use a debugger.
+Recently, while working on a Java project with [IEETA Bioinformatics - UA](http://bioinformatics.ua.pt), I needed to do some serious debugging in the code. As I was new to the project and didn't have a strong knowledge of the project's codebase, I decided to use the Java debugger to inspect the behavior of the code and better understand the flow where the specific bug was occurring. That too was a challenge because I had never used a debugger.
 
 Hence, I decided to write this article to help other programmers that, like I, are beginners at proper debugging and also to help me structure the knowledge I have recently learned.
 
