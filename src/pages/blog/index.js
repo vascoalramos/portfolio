@@ -108,7 +108,6 @@ const StyledTags = styled.ul`
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
   list-style: none;
   li {
@@ -131,7 +130,7 @@ const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout>
+    <Layout isPage={false}>
       <StyledMainContainer>
         <header>
           <h1 className="big-title">Blog</h1>

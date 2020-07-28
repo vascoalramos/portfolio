@@ -56,7 +56,7 @@ const Layout = ({ children, isPage }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isPage: PropTypes.bool.isRequired,
+  isPage: PropTypes.bool,
 };
 
 export default Layout;

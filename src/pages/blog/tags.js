@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
@@ -35,14 +34,9 @@ const StyledTagsContainer = styled(Main)`
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
   <Layout>
-    <Helmet title={title} />
-
     <StyledTagsContainer>
       <span className="breadcrumb">
         <span className="arrow">&larr;</span>
