@@ -26,7 +26,33 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-external-links
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-images
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 700,
+              linkImagesToOriginal: true,
+              quality: 90,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-code-titles',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -142,6 +142,19 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
+  pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 150%;
+
+    & > code {
+      background-color: ${colors.lightNavy};
+      color: ${colors.white};
+      font-size: ${fontSizes.sm};
+      border-radius: ${theme.borderRadius};
+      padding: 0.3em 0.5em;
+    }
+  }
   p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -159,6 +172,18 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   ul {
+    li {
+      font-size: 17px;
+      color: ${colors.white};
+      padding-bottom: 1rem;
+      & > code {
+        background-color: ${colors.lightNavy};
+        color: ${colors.white};
+        font-size: ${fontSizes.sm};
+        border-radius: ${theme.borderRadius};
+        padding: 0.3em 0.5em;
+      }
+    }
     &.fancy-list {
       padding: 0;
       margin: 0;
