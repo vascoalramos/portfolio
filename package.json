@@ -20,8 +20,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "ssr": "gatsby clean && gatsby build && gatsby serve"
+    "clean": "gatsby clean"
   },
   "husky": {
     "hooks": {
