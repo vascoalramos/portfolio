@@ -1,6 +1,6 @@
 ---
 title: My Experience with Java Debugger - Beginner Tips
-description: This is the first post of my new personal blog.
+description: Recently, while working on a Java project with [IEETA Bioinformatics - UA](http://bioinformatics.ua.pt), I needed to do some serious debugging in the code.
 date: '2020-07-28'
 draft: false
 slug: '/blog/java-debugger-beginner-tips'
