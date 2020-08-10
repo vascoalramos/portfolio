@@ -1,6 +1,6 @@
 ---
 title: Get Started with Java Logging
-description: When I started my journey in computer science 3 years ago as a CS undergraduate student, , I never used logging. Only if I knew better...
+description: When I started my journey in computer science 3 years ago as a CS undergraduate student, I never used logging. Only if I knew better...
 date: '2020-08-10'
 draft: false
 slug: '/blog/java-logging'
