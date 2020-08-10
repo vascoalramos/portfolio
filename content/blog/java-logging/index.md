@@ -63,15 +63,15 @@ In this project, I am using Maven so, to add log4j to the project, I need to add
 
 ```xml
 <dependency>
-   <groupId>org.apache.logging.log4j</groupId>
-   <artifactId>log4j-api</artifactId>
-   <version>2.13.3</version>
-</dependency>
+   <groupId>org.apache.logging.log4j< /groupId>
+   <artifactId>log4j-api< /artifactId>
+   <version>2.13.3< /version>
+< /dependency>
 <dependency>
-   <groupId>org.apache.logging.log4j</groupId>
-   <artifactId>log4j-core</artifactId>
-   <version>2.13.3</version>
-</dependency>
+   <groupId>org.apache.logging.log4j< /groupId>
+   <artifactId>log4j-core< /artifactId>
+   <version>2.13.3< /version>
+< /dependency>
 ```
 
 ### Configuring the Logger (a different approach)
@@ -85,17 +85,17 @@ That being said, our journey begins. The first step is to add testing capabiliti
 
 ```xml
 <dependency>
-   <groupId>org.junit.jupiter</groupId>
-   <artifactId>junit-jupiter-api</artifactId>
-   <version>5.6.2</version>
-   <scope>test</scope>
-</dependency>
+   <groupId>org.junit.jupiter< /groupId>
+   <artifactId>junit-jupiter-api< /artifactId>
+   <version>5.6.2< /version>
+   <scope>test< /scope>
+< /dependency>
 <dependency>
-   <groupId>org.junit.jupiter</groupId>
-   <artifactId>junit-jupiter-engine</artifactId>
-   <version>5.6.2</version>
-   <scope>test</scope>
-</dependency>
+   <groupId>org.junit.jupiter< /groupId>
+   <artifactId>junit-jupiter-engine< /artifactId>
+   <version>5.6.2< /version>
+   <scope>test< /scope>
+< /dependency>
 ```
 
 #### Testing Default Behaviour
