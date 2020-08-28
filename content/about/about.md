@@ -3,7 +3,7 @@ image: './profile.jpg'
 resume: resume.pdf
 ---
 
-Hello! I'm Vasco Ramos, a 20-year-old student at the University of Aveiro, from the district of Viseu. I'm currently in the last year of my 3-year Bachelor's Degree in the fields of Computer Science and Software Engineering.
+Hello! I'm Vasco Ramos, a 21-year-old student at the University of Minho, from the district of Viseu. I already graduated from my 3-year Bachelor's Degree in the fields of Computer Science and Software Engineering at the University of Aveiro, and I am currently taking my Mater's Degree in the same fields at the University of Minho.
 
 I'm passionate about Databases, Software Engineering, Web and Micro Services, DevOps and Data Engineering.
 

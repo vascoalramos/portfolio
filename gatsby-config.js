@@ -3,7 +3,7 @@ module.exports = {
     lang: 'en',
     title: 'Vasco Ramos | Computer Science Student',
     description:
-      "I'm Vasco Ramos, a 20-year-old Computer Science and Software Engineering student at the University of Aveiro, from Portugal.",
+      "I'm Vasco Ramos, a 21-year-old Computer Science and Software Engineering student at the University of Minho, from Portugal.",
     author: 'Vasco Ramos',
     siteUrl: 'https://vascoalramos.me',
     imageShare: 'share.png',
