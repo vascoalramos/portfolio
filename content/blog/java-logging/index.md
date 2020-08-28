@@ -76,7 +76,7 @@ In this project, I am using Maven so, to add log4j to the project, I need to add
 
 ### Configuring the Logger (a different approach)
 
-This bit is where I present to you a different approach from so many others logging config tutorials. Following the line of thought from Robert C. Martin in [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code), I decided to explain the learning and configuration process of a third-party library through learning testing. As the author elaborates in the book, using learning tests to approach third-party code that is going to be introduced into your project is a good practice because:
+This bit is where I present to you a different approach from so many others logging config tutorials. Following the line of thought from Robert C. Martin in [Clean Code](https://amzn.to/3gsNbcS), I decided to explain the learning and configuration process of a third-party library through learning testing. As the author elaborates in the book, using learning tests to approach third-party code that is going to be introduced into your project is a good practice because:
 
 - You can test the library capabilities and specificities in a controlled environment with a series of objective and precise experiments.
 - The tests you write in this learning process are a good tool to test new releases of the third-party package, where you can easily see if something changed which enables you to make an informed decision whether to upgrade the package version or not.
