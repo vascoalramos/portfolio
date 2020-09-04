@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
-import { Layout } from '../templates';
+import Layout from '../templates/layout';
 import { Hero, About, Feature, Projects } from '../components';
 
 export default () => {

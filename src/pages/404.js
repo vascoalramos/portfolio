@@ -8,7 +8,7 @@ import '../style/main.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { Layout } from '../templates';
+import Layout from '../templates/layout';
 
 library.add(fab, fas);
 

@@ -68,13 +68,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: `${__dirname}/content/blog/`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: `UA-156556339-1`,
@@ -96,55 +89,5 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
-                return {
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  description: edge.node.frontmatter.description,
-                  url: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.slug}`,
-                  custom_elements: [
-                    { 'content:encoded': edge.node.rawMarkdownBody },
-                    { tags: edge.node.frontmatter.tags.join(',') },
-                  ],
-                };
-              });
-            },
-            query: `
-              {
-                site {
-                  siteMetadata {
-                    siteUrl
-                  }
-                }
-                allMarkdownRemark(
-                  filter: { fileAbsolutePath: { regex: "/blog/" } }
-                ) {
-                  edges {
-                    node {
-                      frontmatter {
-                        description
-                        slug
-                        title
-                        date
-                        tags
-                      }
-                      rawMarkdownBody
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'My feed',
-          },
-        ],
-      },
-    },
   ],
 };
