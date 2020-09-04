@@ -15,7 +15,7 @@ const LogoNavBar = () => {
     query {
       darkLogo: file(relativePath: { eq: "logo-1.png" }) {
         childImageSharp {
-          fixed(height: 50, quality: 100) {
+          fixed(height: 50) {
             ...GatsbyImageSharpFixed_tracedSVG
           }
         }
