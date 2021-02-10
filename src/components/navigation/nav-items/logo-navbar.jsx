@@ -15,7 +15,7 @@ const LogoNavBar = () => {
     query {
       darkLogo: file(relativePath: { eq: "logo-1.png" }) {
         childImageSharp {
-          fixed(height: 50) {
+          fixed(height: 35, quality: 80) {
             ...GatsbyImageSharpFixed_tracedSVG
           }
         }
@@ -24,13 +24,11 @@ const LogoNavBar = () => {
   `);
 
   // Render dark or light logo
-  const renderLogo = () => {
-    return (
-      <animated.div>
-        <Img alt="logo" title="Home" fixed={darkLogo.childImageSharp.fixed} />
-      </animated.div>
-    );
-  };
+  const renderLogo = () => (
+    <animated.div>
+      <Img alt="logo" title="Home" fixed={darkLogo.childImageSharp.fixed} />
+    </animated.div>
+  );
 
   // If is not a section from the index(no one page scroll link), render the gatsby link instead
   return (

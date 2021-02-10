@@ -5,11 +5,12 @@ const StyledLabel = styled.label`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 0rem;
+  right: 2rem;
   transform: translate(-50%, -50%);
   & img {
     display: block;
-    height: auto;
+    height: auto !important;
+    width: 20px !important;
   }
   .bar-wrapper,
   .bar {
@@ -104,22 +105,19 @@ const StyledLabel = styled.label`
 `;
 
 // eslint-disable-next-line react/prop-types
-const HamburgerToggler = ({ menuOpened, toggleChange }) => {
-  return (
-    <StyledLabel>
-      <input type="checkbox" checked={menuOpened} onChange={toggleChange} />
-      <div className="bar-wrapper">
-        <div className="bar top-bar" />
-        <div className="bar middle-bar" />
-        <div className="bar bottom-bar" />
-      </div>
-      <img
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="20px"
-        alt="Hamburguer Mobile Menu"
-      />
-    </StyledLabel>
-  );
-};
+const HamburgerToggler = ({ menuOpened, toggleChange }) => (
+  <StyledLabel>
+    <input type="checkbox" checked={menuOpened} onChange={toggleChange} />
+    <div className="bar-wrapper">
+      <div className="bar top-bar" />
+      <div className="bar middle-bar" />
+      <div className="bar bottom-bar" />
+    </div>
+    <img
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="Hamburguer Mobile Menu"
+    />
+  </StyledLabel>
+);
 
 export default HamburgerToggler;

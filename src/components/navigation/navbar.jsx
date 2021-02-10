@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 const Contained = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 0px 5rem;
+  padding: 0px 2rem;
 `;
 
 const Navbar = React.memo(() => {
