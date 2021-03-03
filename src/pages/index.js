@@ -5,7 +5,7 @@ import '../style/main.scss';
 import Layout from '../templates/layout';
 import { Hero, About, Feature, Projects } from '../components';
 
-export default () => {
+const Index = () => {
   const data = useStaticQuery(
     graphql`
       {
@@ -88,3 +88,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default Index;
