@@ -282,104 +282,97 @@ const Featured = ({ data }) => {
         {data &&
           data.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, gitlab, image, showInProjects } = frontmatter;
-            let element = null;
+            const { external, title, tech, github, gitlab, image } = frontmatter;
 
-            if (showInProjects) {
-              element = (
-                <StyledProject
-                  key={uuidv1()}
-                  ref={(el) => {
-                    revealProjects.current[i] = el;
-                  }}
-                >
-                  <StyledContent>
-                    <StyledLabel>Featured Project</StyledLabel>
-                    <StyledProjectName>
-                      {external ? (
-                        <a
-                          href={external}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="External Link"
-                        >
-                          {title}
-                        </a>
-                      ) : (
-                        title
-                      )}
-                    </StyledProjectName>
-                    <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
-                    {tech && (
-                      <StyledTechList>
-                        {tech.map((entry) => (
-                          <li key={uuidv1()}>{entry}</li>
-                        ))}
-                      </StyledTechList>
+            return (
+              <StyledProject
+                key={uuidv1()}
+                ref={(el) => {
+                  revealProjects.current[i] = el;
+                }}
+              >
+                <StyledContent>
+                  <StyledLabel>Featured Project</StyledLabel>
+                  <StyledProjectName>
+                    {external ? (
+                      <a
+                        href={external}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="External Link"
+                      >
+                        {title}
+                      </a>
+                    ) : (
+                      title
                     )}
-                    <StyledLinkWrapper>
-                      {external && (
-                        <a
-                          href={external}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="External Link"
-                        >
-                          <FontAwesomeIcon
-                            icon="globe"
-                            inverse
-                            size="2x"
-                            style={{ fontSize: '2.5rem' }}
-                          />
-                        </a>
-                      )}
-                      {github && (
-                        <a
-                          href={github}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="GitHub Link"
-                        >
-                          <FontAwesomeIcon
-                            icon={['fab', 'github']}
-                            size="2x"
-                            inverse
-                            style={{ fontSize: '2.5rem' }}
-                          />
-                        </a>
-                      )}
-                      {gitlab && (
-                        <a
-                          href={gitlab}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="GitLab Link"
-                        >
-                          <FontAwesomeIcon
-                            icon={['fab', 'gitlab']}
-                            size="2x"
-                            inverse
-                            style={{ fontSize: '2.5rem' }}
-                          />
-                        </a>
-                      )}
-                    </StyledLinkWrapper>
-                  </StyledContent>
+                  </StyledProjectName>
+                  <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
+                  {tech && (
+                    <StyledTechList>
+                      {tech.map((entry) => (
+                        <li key={uuidv1()}>{entry}</li>
+                      ))}
+                    </StyledTechList>
+                  )}
+                  <StyledLinkWrapper>
+                    {external && (
+                      <a
+                        href={external}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="External Link"
+                      >
+                        <FontAwesomeIcon
+                          icon="globe"
+                          inverse
+                          size="2x"
+                          style={{ fontSize: '2.5rem' }}
+                        />
+                      </a>
+                    )}
+                    {github && (
+                      <a
+                        href={github}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="GitHub Link"
+                      >
+                        <FontAwesomeIcon
+                          icon={['fab', 'github']}
+                          size="2x"
+                          inverse
+                          style={{ fontSize: '2.5rem' }}
+                        />
+                      </a>
+                    )}
+                    {gitlab && (
+                      <a
+                        href={gitlab}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="GitLab Link"
+                      >
+                        <FontAwesomeIcon
+                          icon={['fab', 'gitlab']}
+                          size="2x"
+                          inverse
+                          style={{ fontSize: '2.5rem' }}
+                        />
+                      </a>
+                    )}
+                  </StyledLinkWrapper>
+                </StyledContent>
 
-                  <StyledImgContainer
-                    href={external || github || '#'}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <StyledFeaturedImg
-                      alt={`${title} picture`}
-                      fluid={image.childImageSharp.fluid}
-                    />
-                  </StyledImgContainer>
-                </StyledProject>
-              );
-            }
-            return element;
+                <StyledImgContainer
+                  href={external || github || '#'}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <StyledFeaturedImg alt={`${title} picture`} fluid={image.childImageSharp.fluid} />
+                </StyledImgContainer>
+              </StyledProject>
+            );
           })}
       </div>
     </StyledContainer>

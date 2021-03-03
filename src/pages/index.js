@@ -10,7 +10,10 @@ const Index = () => {
     graphql`
       {
         featured: allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/featured/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/featured/" }
+            frontmatter: { showInProjects: { eq: true } }
+          }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
@@ -37,7 +40,7 @@ const Index = () => {
         projects: allMarkdownRemark(
           filter: {
             fileAbsolutePath: { regex: "/projects/" }
-            frontmatter: { showInProjects: { ne: false } }
+            frontmatter: { showInProjects: { eq: true } }
           }
           sort: { fields: [frontmatter___date], order: DESC }
         ) {
