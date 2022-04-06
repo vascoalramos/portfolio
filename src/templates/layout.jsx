@@ -27,7 +27,6 @@ const Layout = ({ children, isPage }) => {
               description
               author
               siteUrl
-              imageShare
             }
           }
         }
