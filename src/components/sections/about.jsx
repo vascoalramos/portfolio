@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import Title from '../title';
 
@@ -27,10 +27,10 @@ const About = ({ data }) => {
           <Col md={4} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               <div className="about-wrapper__image">
-                <Img
+                <GatsbyImage
+                  image={data.frontmatter.image.childImageSharp.gatsbyImageData}
                   className="rounded shadow-lg"
                   alt="profile picture"
-                  fixed={data.frontmatter.image.childImageSharp.fixed}
                 />
               </div>
             </Fade>

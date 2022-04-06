@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { v1 as uuidv1 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Title from '../title';
 import { srConfig } from '../../config';
 
@@ -133,7 +133,7 @@ const StyledLinkWrapper = styled.div`
   }
 `;
 
-const StyledFeaturedImg = styled(Img)`
+const StyledFeaturedImg = styled(GatsbyImage)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
@@ -369,7 +369,10 @@ const Featured = ({ data }) => {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <StyledFeaturedImg alt={`${title} picture`} fluid={image.childImageSharp.fluid} />
+                  <StyledFeaturedImg
+                    alt={`${title} picture`}
+                    image={image.childImageSharp.gatsbyImageData}
+                  />
                 </StyledImgContainer>
               </StyledProject>
             );

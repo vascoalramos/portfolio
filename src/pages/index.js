@@ -22,9 +22,12 @@ const Index = () => {
                 title
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
+                    gatsbyImageData(
+                      quality: 90
+                      placeholder: TRACED_SVG
+                      tracedSVGOptions: { color: "#64ffda" }
+                      layout: CONSTRAINED
+                    )
                   }
                 }
                 tech
@@ -70,9 +73,7 @@ const Index = () => {
           frontmatter {
             image {
               childImageSharp {
-                fixed(width: 300) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 300, layout: FIXED)
               }
             }
             resume

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { animated } from 'react-spring';
 
 const StyledLink = styled(Link)`
@@ -12,12 +12,10 @@ const StyledLink = styled(Link)`
 
 const LogoNavBar = () => {
   const { darkLogo } = useStaticQuery(graphql`
-    query {
+    {
       darkLogo: file(relativePath: { eq: "logo-1.png" }) {
         childImageSharp {
-          fixed(height: 35, quality: 80) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
+          gatsbyImageData(height: 35, quality: 80, placeholder: TRACED_SVG, layout: FIXED)
         }
       }
     }
@@ -26,7 +24,7 @@ const LogoNavBar = () => {
   // Render dark or light logo
   const renderLogo = () => (
     <animated.div>
-      <Img alt="logo" title="Home" fixed={darkLogo.childImageSharp.fixed} />
+      <GatsbyImage image={darkLogo.childImageSharp.gatsbyImageData} alt="logo" title="Home" />
     </animated.div>
   );
 

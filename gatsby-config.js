@@ -19,6 +19,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-transformer-sharp`,
       options: {

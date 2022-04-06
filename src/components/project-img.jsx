@@ -2,9 +2,9 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-export const StyledFeaturedImg = styled(Img)`
+export const StyledFeaturedImg = styled(GatsbyImage)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
@@ -24,16 +24,20 @@ export const StyledFeaturedImg = styled(Img)`
 const ProjectImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
-      query {
+      {
         images: allFile {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  width: 700
+                  quality: 90
+                  tracedSVGOptions: { color: "#64ffda" }
+                  placeholder: TRACED_SVG
+                  layout: CONSTRAINED
+                )
               }
             }
           }
@@ -47,7 +51,7 @@ const ProjectImg = ({ filename, alt }) => (
 
       if (!image) return null;
 
-      const imageFluid = image.node.childImageSharp.fluid;
+      const imageFluid = image.node.childImageSharp.gatsbyImageData;
       return <StyledFeaturedImg alt={alt} fluid={imageFluid} />;
     }}
   />

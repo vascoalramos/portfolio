@@ -126,7 +126,7 @@ const StyledTechList = styled.ul`
   }
 `;
 const StyledMoreButton = styled.button`
-  margin: 100px auto 0;
+  margin: 80px auto 0;
   display: block;
   background-color: transparent;
 `;
