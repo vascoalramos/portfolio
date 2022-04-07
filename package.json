@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public -m 'Deploy new portfolio version'",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "serve": "gatsby serve",
