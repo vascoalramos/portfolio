@@ -20,7 +20,9 @@ const Index = () => {
             node {
               frontmatter {
                 title
-                image
+                image {
+                  childImageSharp
+                }
                 tech
                 github
                 gitlab
