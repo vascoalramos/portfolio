@@ -22,12 +22,12 @@ const Index = () => {
                 title
                 image {
                   childImageSharp {
-                    gatsbyImageData(
-                      quality: 90
-                      placeholder: TRACED_SVG
-                      tracedSVGOptions: { color: "#64ffda" }
-                      layout: CONSTRAINED
-                    )
+                    #gatsbyImageData(
+                    #  quality: 90
+                    #  placeholder: TRACED_SVG
+                    #  tracedSVGOptions: { color: "#64ffda" }
+                    #  layout: CONSTRAINED
+                    #)
                   }
                 }
                 tech
@@ -73,7 +73,7 @@ const Index = () => {
           frontmatter {
             image {
               childImageSharp {
-                gatsbyImageData(width: 300, layout: FIXED)
+                #gatsbyImageData(width: 300, layout: FIXED)
               }
             }
             resume
