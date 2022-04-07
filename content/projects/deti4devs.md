@@ -1,7 +1,7 @@
 ---
-date: '2019-10-05'
-title: 'DETI4devs'
-external: 'https://deti4devs.pt/'
+date: 2019-10-05
+title: DETI4devs
+external: https://deti4devs.pt
 tech:
   - Django
   - Python

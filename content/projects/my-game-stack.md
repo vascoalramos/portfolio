@@ -1,7 +1,7 @@
 ---
-date: '2019-06-14'
-title: 'My Game Stack'
-github: 'https://github.com/vascoalramos/my-game-stack'
+date: 2019-06-14
+title: My Game Stack
+github: https://github.com/vascoalramos/my-game-stack
 tech:
   - Microsoft SQL Server
   - C#

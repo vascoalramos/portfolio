@@ -1,7 +1,7 @@
 ---
-date: '2018-12-01'
-title: 'P2P Drive-Through'
-github: 'https://github.com/vascoalramos/dimX'
+date: 2018-12-01
+title: P2P Drive-Through
+github: https://github.com/vascoalramos/dimX
 tech:
   - Python
   - Bash

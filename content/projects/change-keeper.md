@@ -1,7 +1,7 @@
 ---
-date: '2019-06-19'
-title: 'Change Keeper'
-github: 'https://github.com/vascoalramos/change-keeper'
+date: 2019-06-19
+title: Change Keeper
+github: https://github.com/vascoalramos/change-keeper
 tech:
   - Java
   - Android

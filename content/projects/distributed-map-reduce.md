@@ -1,7 +1,7 @@
 ---
-date: '2019-01-24'
-title: 'Distributed Map Reduce'
-github: 'https://github.com/vascoalramos/distributed-map-reduce'
+date: 2019-01-24
+title: Distributed Map Reduce
+github: https://github.com/vascoalramos/distributed-map-reduce
 tech:
   - Python
   - Bash

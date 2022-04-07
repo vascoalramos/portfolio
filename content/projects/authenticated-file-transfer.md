@@ -1,7 +1,7 @@
 ---
-date: '2019-12-22'
-title: 'Authenticated File Transfer'
-github: 'https://github.com/vascoalramos/authenticated-file-transfer'
+date: 2019-12-22
+title: Authenticated File Transfer
+github: https://github.com/vascoalramos/authenticated-file-transfer
 tech:
   - Python
   - X.509 Certificates

@@ -1,7 +1,7 @@
 ---
-date: '2020-06-27'
-title: 'Image Face Detection'
-github: 'https://github.com/vascoalramos/image-face-detection'
+date: 2020-06-27
+title: Image Face Detection
+github: https://github.com/vascoalramos/image-face-detection
 tech:
   - Jupyter Notebook
   - Tensorflow

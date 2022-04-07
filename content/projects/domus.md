@@ -1,9 +1,9 @@
 ---
-date: '2020-06-04'
-title: 'Domus'
-github: 'https://github.com/domus-ua'
-gitlab: 'https://gitlab.com/tqs-domus'
-external: 'https://tqs-domus.gitlab.io/'
+date: 2020-06-04
+title: Domus
+github: https://github.com/domus-ua
+gitlab: https://gitlab.com/tqs-domus
+external: https://tqs-domus.gitlab.io
 tech:
   - Spring Boot
   - Java

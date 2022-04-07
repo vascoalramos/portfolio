@@ -1,7 +1,7 @@
 ---
-date: '2019-01-22'
-title: 'Bomberman AI Agent'
-github: 'https://github.com/vascoalramos/bomberman-ai'
+date: 2019-01-22
+title: Bomberman AI Agent
+github: https://github.com/vascoalramos/bomberman-ai
 tech:
   - Python
 showInProjects: true

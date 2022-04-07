@@ -1,9 +1,9 @@
 ---
-date: '2020-04-10'
-title: 'Air Quality'
-github: 'https://github.com/vascoalramos/air-quality-service'
-gitlab: 'https://gitlab.com/vascoalramos/air-quality-service'
-external: 'https://tqs-air-quality-service.herokuapp.com/'
+date: 2020-04-10
+title: Air Quality
+github: https://github.com/vascoalramos/air-quality-service
+gitlab: https://gitlab.com/vascoalramos/air-quality-service
+external: https://tqs-air-quality-service.herokuapp.com
 tech:
   - Spring Boot
   - Java

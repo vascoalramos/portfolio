@@ -1,7 +1,7 @@
 ---
-date: '2020-07-13'
-title: 'Electric Vehicle Adoption Model'
-github: 'https://github.com/vascoalramos/ev-adoption-model'
+date: 2020-07-13
+title: Electric Vehicle Adoption Model
+github: https://github.com/vascoalramos/ev-adoption-model
 tech:
   - Vensim
 showInProjects: true
