@@ -16,8 +16,6 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-transformer-sharp`,
@@ -25,6 +23,8 @@ module.exports = {
         checkSupportedExtensions: false,
       },
     },
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
