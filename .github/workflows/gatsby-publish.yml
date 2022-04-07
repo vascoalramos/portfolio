@@ -23,9 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Clean Gatsby App Cache
-        run: npm run clean
       
       - name: Deploy Gatsby App
         run: npm run build

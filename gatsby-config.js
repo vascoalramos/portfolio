@@ -17,12 +17,8 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        checkSupportedExtensions: false,
-      },
-    },
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-image',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
@@ -89,6 +85,5 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-image',
   ],
 };

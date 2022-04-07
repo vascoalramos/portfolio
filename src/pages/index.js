@@ -21,7 +21,14 @@ const Index = () => {
               frontmatter {
                 title
                 image {
-                  childImageSharp
+                  childImageSharp {
+                    gatsbyImageData(
+                      quality: 90
+                      placeholder: TRACED_SVG
+                      tracedSVGOptions: { color: "#64ffda" }
+                      layout: CONSTRAINED
+                    )
+                  }
                 }
                 tech
                 github
@@ -64,7 +71,11 @@ const Index = () => {
         about: markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
           html
           frontmatter {
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 300, layout: FIXED)
+              }
+            }
             resume
           }
         }
