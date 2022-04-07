@@ -71,11 +71,11 @@ const Index = () => {
         about: markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
           html
           frontmatter {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 300, layout: FIXED)
-              }
-            }
+            #image {
+            #  childImageSharp {
+            #    gatsbyImageData(width: 300, layout: FIXED)
+            #  }
+            #}
             resume
           }
         }
