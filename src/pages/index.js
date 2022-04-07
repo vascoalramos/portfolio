@@ -28,6 +28,7 @@ const Index = () => {
                       tracedSVGOptions: { color: "#64ffda" }
                       layout: CONSTRAINED
                     )
+                  }
                 }
                 tech
                 github
@@ -73,6 +74,7 @@ const Index = () => {
             image {
               childImageSharp {
                 gatsbyImageData(width: 300, layout: FIXED)
+              }
             }
             resume
           }
