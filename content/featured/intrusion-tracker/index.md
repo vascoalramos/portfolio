@@ -1,9 +1,9 @@
 ---
-date: '2020-02-22'
-title: 'Intrusion Tracker'
+date: 2020-02-22
+title: Intrusion Tracker
 image: it.png
-github: 'https://github.com/vascoalramos/intrusion-tracker'
-gitlab: 'https://gitlab.com/intrusion-tracker/intrusion-tracker'
+github: https://github.com/vascoalramos/intrusion-tracker
+gitlab: https://gitlab.com/intrusion-tracker/intrusion-tracker
 tech:
   - ReactJs
   - React Native

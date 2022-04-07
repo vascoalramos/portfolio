@@ -1,9 +1,9 @@
 ---
-date: '2021-02-04'
-title: 'Unifiles'
+date: 2021-02-04
+title: Unifiles
 image: unifiles.png
-github: 'https://github.com/vascoalramos/unifiles'
-external: 'https://unifiles.herokuapp.com'
+github: https://github.com/vascoalramos/unifiles
+external: https://unifiles.herokuapp.com
 tech:
   - Javascript
   - Express.js

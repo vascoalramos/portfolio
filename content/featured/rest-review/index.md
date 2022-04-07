@@ -1,9 +1,9 @@
 ---
-date: '2020-04-09'
-title: 'Rest Review'
+date: 2020-04-09
+title: Rest Review
 image: rest-review.png
-github: 'https://github.com/vascoalramos/rest-review'
-gitlab: 'https://gitlab.com/tpw-group/project-2'
+github: https://github.com/vascoalramos/rest-review
+gitlab: https://gitlab.com/tpw-group/project-2
 tech:
   - Django
   - Angular
