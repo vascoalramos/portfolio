@@ -21,41 +21,40 @@ export const StyledFeaturedImg = styled(GatsbyImage)`
   }
 `;
 
-const ProjectImg = ({ filename, alt }) => (
-  <StaticQuery
-    query={graphql`
-      {
-        images: allFile {
-          edges {
-            node {
-              relativePath
-              name
-              childImageSharp {
-                gatsbyImageData(
-                  width: 700
-                  quality: 90
-                  tracedSVGOptions: { color: "#64ffda" }
-                  placeholder: TRACED_SVG
-                  layout: CONSTRAINED
-                )
-              }
+const ProjectImg = ({ filename, alt }) => {
+  data = useStaticQuery(graphql`
+    {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              gatsbyImageData(
+                width: 700
+                quality: 90
+                tracedSVGOptions: { color: "#64ffda" }
+                placeholder: TRACED_SVG
+                layout: CONSTRAINED
+              )
             }
           }
         }
       }
-    `}
-    render={(data) => {
-      const image = data.images.edges.find((n) => {
-        return n.node.relativePath.includes(filename);
-      });
+    }
+  `);
+  
+  render = (data) => {
+    const image = data.images.edges.find((n) => {
+      return n.node.relativePath.includes(filename);
+    });
 
-      if (!image) return null;
+    if (!image) return null;
 
-      const imageFluid = image.node.childImageSharp.gatsbyImageData;
-      return <StyledFeaturedImg alt={alt} fluid={imageFluid} />;
-    }}
-  />
-);
+    const imageFluid = image.node.childImageSharp.gatsbyImageData;
+    return <StyledFeaturedImg alt={alt} fluid={imageFluid} />;
+  };
+};
 
 ProjectImg.propTypes = {
   filename: PropTypes.string,
