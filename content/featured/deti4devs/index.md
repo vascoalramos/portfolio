@@ -1,7 +1,7 @@
 ---
 date: '2019-10-05'
 title: 'DETI4devs'
-image: './deti4devs.png'
+image: deti4devs.png
 external: 'https://deti4devs.pt/'
 tech:
   - Django

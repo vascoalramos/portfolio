@@ -1,7 +1,7 @@
 ---
 date: '2020-07-01'
 title: 'My Life'
-image: './cover.png'
+image: cover.png
 github: 'https://github.com/my-life-ua'
 gitlab: 'https://gitlab.com/my-life-ua'
 external: 'https://my-life-ua.gitlab.io/'

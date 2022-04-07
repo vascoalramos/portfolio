@@ -1,7 +1,7 @@
 ---
 date: '2020-06-04'
 title: 'Domus'
-image: './domus.png'
+image: domus.png
 github: 'https://github.com/domus-ua'
 gitlab: 'https://gitlab.com/tqs-domus'
 external: 'https://tqs-domus.gitlab.io/'

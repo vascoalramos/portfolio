@@ -19,7 +19,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-image',
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
@@ -90,5 +89,6 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-image',
   ],
 };

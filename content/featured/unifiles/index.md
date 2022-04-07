@@ -1,7 +1,7 @@
 ---
 date: '2021-02-04'
 title: 'Unifiles'
-image: './unifiles.png'
+image: unifiles.png
 github: 'https://github.com/vascoalramos/unifiles'
 external: 'https://unifiles.herokuapp.com'
 tech:
