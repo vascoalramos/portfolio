@@ -27,7 +27,7 @@ const StyledLabel = styled.label`
       content: '';
       width: 50%;
       height: 15%;
-      background: var(--primary);
+      background: #4ddbff;
       display: block;
       position: absolute;
       left: 0;
