@@ -64,7 +64,7 @@
     "react-helmet": "^6.1.0",
     "react-reveal": "^1.2.2",
     "react-spring": "^9.4.5",
-    "react-transition-group": "^4.4.2",
+    "react-transition-group": "^4.4.5",
     "scrollreveal": "^4.0.9",
     "styled-components": "^5.3.5",
     "uuid": "^8.3.2"
