@@ -20,7 +20,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     'gatsby-plugin-image',
     'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,

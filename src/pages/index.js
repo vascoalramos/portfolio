@@ -14,7 +14,7 @@ const Index = () => {
             fileAbsolutePath: { regex: "/featured/" }
             frontmatter: { showInProjects: { eq: true } }
           }
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
         ) {
           edges {
             node {
@@ -24,7 +24,7 @@ const Index = () => {
                   childImageSharp {
                     gatsbyImageData(
                       quality: 90
-                      placeholder: TRACED_SVG
+                      placeholder: BLURRED
                       tracedSVGOptions: { color: "#64ffda" }
                       layout: CONSTRAINED
                     )
@@ -45,7 +45,7 @@ const Index = () => {
             fileAbsolutePath: { regex: "/projects/" }
             frontmatter: { showInProjects: { eq: true } }
           }
-          sort: { fields: [frontmatter___date], order: DESC }
+          sort: { frontmatter: { date: DESC } }
         ) {
           edges {
             node {

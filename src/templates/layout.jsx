@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -33,16 +32,10 @@ const Layout = ({ children, isPage }) => {
       `}
       render={({ site }) => (
         <div>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>{site.siteMetadata.title}</title>
-            <html lang="en" />
-            <meta name="description" content={site.siteMetadata.description} />
-          </Helmet>
+          <Head data={site.siteMetadata} />
 
           <GlobalStyle />
 
-          <SEO data={site.siteMetadata} />
           <Navbar />
           {children}
           {isPage && <Contact data={site.siteMetadata.email} />}
@@ -56,6 +49,17 @@ const Layout = ({ children, isPage }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isPage: PropTypes.bool,
+};
+
+export const Head = (data) => {
+  return (
+    <>
+      <meta charSet="utf-8" />
+      <html lang={data.lang} />
+      <meta name="description" content={data.description} />
+      <SEO data={data} />
+    </>
+  );
 };
 
 export default Layout;

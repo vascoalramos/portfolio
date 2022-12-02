@@ -1,44 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 
 const SEO = ({ data }) => {
   const metaDescription = data.description;
   const metaImage = `${data.siteUrl}/${data.imageShare}`;
-  const { lang } = data;
 
   return (
-    <Helmet
-      htmlAttributes={{ lang }}
-      title={data.title}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: 'og:url',
-          content: data.siteUrl,
-        },
-        {
-          property: `og:title`,
-          content: data.title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-
-        {
-          property: 'og:image',
-          content: metaImage,
-        },
-      ]}
-    />
+    <>
+      <title>{data.title}</title>
+      <meta name="description" content={metaDescription} />
+      <meta name="og:url" content={data.siteUrl} />
+      <meta name="og:title" content={data.title} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:image" content={metaImage} />
+      <meta name="og:type" content="website" />
+    </>
   );
 };
 

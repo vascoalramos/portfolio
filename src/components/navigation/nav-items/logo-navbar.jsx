@@ -15,7 +15,7 @@ const LogoNavBar = () => {
     {
       darkLogo: file(relativePath: { eq: "logo-1.png" }) {
         childImageSharp {
-          gatsbyImageData(height: 35, quality: 80, placeholder: TRACED_SVG, layout: FIXED)
+          gatsbyImageData(height: 35, quality: 80, placeholder: BLURRED, layout: FIXED)
         }
       }
     }
