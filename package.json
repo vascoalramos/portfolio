@@ -55,7 +55,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^6.18.0",
     "gatsby-source-filesystem": "^4.18.0",
-    "gatsby-transformer-remark": "^5.18.0",
+    "gatsby-transformer-remark": "^6.2.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
