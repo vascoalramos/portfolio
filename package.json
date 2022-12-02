@@ -66,7 +66,7 @@
     "react-spring": "^9.4.5",
     "react-transition-group": "^4.4.2",
     "scrollreveal": "^4.0.9",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
