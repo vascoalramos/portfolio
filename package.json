@@ -43,7 +43,7 @@
     "bootstrap": "^5.2.3",
     "gatsby": "^5.2.0",
     "gatsby-plugin-gtag": "^1.0.13",
-    "gatsby-plugin-image": "^3.2.0",
+    "gatsby-plugin-image": "^3.5.0",
     "gatsby-plugin-manifest": "^5.2.0",
     "gatsby-plugin-offline": "^6.2.0",
     "gatsby-plugin-robots-txt": "1.8.0",
