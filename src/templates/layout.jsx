@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -10,39 +10,35 @@ import { GlobalStyle } from '../styles';
 library.add(fab, fas);
 
 const Layout = ({ children, isPage }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query LayoutQuery {
-          site {
-            siteMetadata {
-              social {
-                name
-                url
-              }
-              email
-              lang
-              title
-              description
-              author
-              siteUrl
-            }
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          social {
+            name
+            url
           }
+          email
+          lang
+          title
+          description
+          author
+          siteUrl
         }
-      `}
-      render={({ site }) => (
-        <div>
-          <Head data={site.siteMetadata} />
+      }
+    }
+  `);
+  return (
+    <>
+      <Head data={data.site.siteMetadata} />
 
-          <GlobalStyle />
+      <GlobalStyle />
 
-          <Navbar />
-          {children}
-          {isPage && <Contact data={site.siteMetadata.email} />}
-          <Footer data={site.siteMetadata} />
-        </div>
-      )}
-    />
+      <Navbar />
+      {children}
+      {isPage && <Contact data={data.site.siteMetadata.email} />}
+      <Footer data={data.site.siteMetadata} />
+    </>
   );
 };
 
@@ -51,7 +47,7 @@ Layout.propTypes = {
   isPage: PropTypes.bool,
 };
 
-export const Head = (data) => {
+export const Head = ({ data }) => {
   return (
     <>
       <meta charSet="utf-8" />
