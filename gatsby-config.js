@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     lang: 'en',
     title: 'Vasco Ramos | Junior Infrastructure Engineer',
-    description:
-      "I'm Vasco Ramos, a 23-year-old Infrastructure Engineer, from Portugal.",
+    description: "I'm Vasco Ramos, a 23-year-old Infrastructure Engineer, from Portugal.",
     author: 'Vasco Ramos',
     siteUrl: 'https://vascoalramos.me',
     imageShare: 'share.png',
