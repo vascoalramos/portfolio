@@ -47,7 +47,7 @@
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-offline": "^6.9.0",
     "gatsby-plugin-robots-txt": "1.8.0",
-    "gatsby-plugin-sass": "^6.9.0",
+    "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-remark-code-titles": "^1.1.0",
