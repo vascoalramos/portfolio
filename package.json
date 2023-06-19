@@ -45,7 +45,7 @@
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.11.0",
-    "gatsby-plugin-offline": "^6.9.0",
+    "gatsby-plugin-offline": "^6.11.0",
     "gatsby-plugin-robots-txt": "1.8.0",
     "gatsby-plugin-sass": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
