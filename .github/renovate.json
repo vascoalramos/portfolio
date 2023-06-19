@@ -14,8 +14,7 @@
       "matchManagers": ["html", "npm", "nvm"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
-      "automergeType": "branch",
-      "rangeStrategy": "bump"
+      "automergeType": "branch"
     }
   ]
 }
