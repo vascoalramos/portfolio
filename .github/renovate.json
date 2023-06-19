@@ -4,6 +4,13 @@
   "rebaseWhen": "conflicted",
   "packageRules": [
     {
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "actions",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
       "matchManagers": ["html", "npm", "nvm"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
