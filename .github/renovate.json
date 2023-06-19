@@ -8,7 +8,8 @@
       "semanticCommitType": "chore",
       "semanticCommitScope": "actions",
       "automerge": true,
-      "automergeType": "branch"
+      "automergeType": "branch",
+      "rangeStrategy": "bump"
     },
     {
       "matchManagers": ["html", "npm", "nvm"],
