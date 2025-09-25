@@ -61,7 +61,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-reveal": "^1.2.2",
-    "react-spring": "^9.7.1",
+    "react-spring": "^10.0.0",
     "react-transition-group": "^4.4.5",
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.0.0",
