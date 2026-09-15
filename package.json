@@ -65,7 +65,7 @@
     "react-transition-group": "^4.4.5",
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^11.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.5",
